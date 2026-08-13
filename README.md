@@ -1,54 +1,119 @@
-# .
+# Growbase 🌱
 
-This template should help get you started developing with Vue 3 in Vite.
+---
 
-## Recommended IDE Setup
+## PROJECT SETTINGS ⚙️
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+This project uses:
 
-## Recommended Browser Setup
+- **Vue 3**
+- **TypeScript 6**
+- **Vite 8**
+- **Node.js 24.18.0**
+- **Vue Router**
+- **Pinia**
+- **Vitest**
+- **ESLint**
+- **Oxlint**
+- **Prettier**
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### Installation
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Run development server
 
-```sh
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+---
 
-```sh
-npm run build
+## CODE QUALITY
+
+This project uses **Prettier**, **ESLint** and **Oxlint** to keep the code consistent and clean.
+
+### Check formatting
+
+```bash
+npm run format:check
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Fix formatting
 
-```sh
+```bash
+npm run format
+```
+
+### Check lint
+
+```bash
+npm run lint
+```
+
+### Fix lint
+
+```bash
+npm run lint:fix
+```
+
+### Type checking
+
+```bash
+npm run type-check
+```
+
+---
+
+## TESTING
+
+This project uses **Vitest**.
+
+### Running tests
+
+```bash
 npm run test:unit
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Running tests once
 
-```sh
-npm run lint
+```bash
+npm run test:unit:run
+```
+
+---
+
+## GIT HOOKS
+
+This project uses **Husky** to run quality checks before every commit.
+
+The `pre-commit` hook checks:
+
+- Prettier formatting
+- ESLint and Oxlint
+- TypeScript
+- Unit tests
+
+If any check fails, the commit is aborted.
+
+---
+
+## COMMITS
+
+This project follows **Conventional Commits** using **Commitizen** and **Commitlint**.
+
+To create a commit:
+
+```bash
+npx cz
+```
+
+Commit messages are validated automatically by the `commit-msg` hook.
+
+Example:
+
+```text
+feat: add crop management
 ```
