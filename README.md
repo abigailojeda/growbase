@@ -16,6 +16,7 @@ This project uses:
 - **ESLint**
 - **Oxlint**
 - **Prettier**
+- **Tailwind CSS**
 
 ### Installation
 
@@ -135,3 +136,11 @@ The pipeline:
 7. Builds the application
 
 If any check fails, the pipeline stops and the CI fails.
+
+## THEMING 🎨
+
+This project uses **Tailwind CSS** with semantic design tokens and CSS variables.
+
+Growbase has its own theme for public pages, while business line themes are loaded dynamically from application data.
+
+Themes support both light and dark color schemes.
