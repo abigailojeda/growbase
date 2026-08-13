@@ -1,10 +1,10 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { createPinia, setActivePinia } from 'pinia'
+import { nextTick } from 'vue'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { useColorModeStore } from '@/theme/stores/colorMode.store'
 
 import { useColorMode } from './useColorMode'
-import { nextTick } from 'vue'
 
 describe('useColorMode', () => {
   beforeEach(() => {
@@ -18,6 +18,10 @@ describe('useColorMode', () => {
         matches: false,
       }),
     )
+  })
+
+  afterEach(() => {
+    vi.unstubAllGlobals()
   })
 
   it('uses the persisted color mode when available', () => {

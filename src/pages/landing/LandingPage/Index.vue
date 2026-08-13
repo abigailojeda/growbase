@@ -3,5 +3,7 @@
 <template>
   <main>
     <h1>Growbase</h1>
+
+    <ColorModeToggle />
   </main>
 </template>

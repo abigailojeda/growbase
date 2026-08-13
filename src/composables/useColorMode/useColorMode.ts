@@ -1,5 +1,6 @@
 import { watch } from 'vue'
 import { storeToRefs } from 'pinia'
+
 import { useColorModeStore } from '@/theme/stores/colorMode.store'
 import type { ColorMode } from '@/theme/types'
 
@@ -34,7 +35,7 @@ const applyColorMode = (mode: ColorMode): void => {
   document.documentElement.classList.toggle('dark', mode === 'dark')
 }
 
-// INITIALIZES AND EXPOSES THE GLOBAL COLOR MODE
+// INITIALIZES THE GLOBAL COLOR MODE
 export const useColorMode = () => {
   const colorModeStore = useColorModeStore()
   const { mode } = storeToRefs(colorModeStore)
@@ -48,10 +49,4 @@ export const useColorMode = () => {
     localStorage.setItem(STORAGE_KEY, newMode)
     applyColorMode(newMode)
   })
-
-  return {
-    mode,
-    setMode: colorModeStore.setMode,
-    toggleMode: colorModeStore.toggleMode,
-  }
 }
