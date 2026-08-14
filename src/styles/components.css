@@ -1,0 +1,20 @@
+@layer components {
+  .glass-surface {
+    @apply bg-background/70 backdrop-blur-md;
+  }
+
+  .primary-btn {
+    @apply inline-flex cursor-pointer items-center justify-center rounded-lg bg-primary px-6 py-3 font-medium text-white;
+  }
+
+  .landing-hero-background {
+    background-image: url('/images/landing1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .landing-hero-mobile-position {
+    background-position: center 55%;
+  }
+}
