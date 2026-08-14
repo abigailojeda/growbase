@@ -4,6 +4,9 @@ export const appRoutes: RouteRecordRaw[] = [
   {
     path: '/app',
     component: () => import('@/layouts/AppLayout/Index.vue'),
+    meta: {
+      requiresAuth: true,
+    },
     children: [
       {
         path: '',
