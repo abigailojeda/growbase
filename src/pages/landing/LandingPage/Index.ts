@@ -1,11 +1,13 @@
 import { defineComponent } from 'vue'
 
-import ColorModeToggle from '@/components/ColorModeToggle/Index.vue'
+import Navbar from '@/components/Navbar/Index.vue'
+import LandingHeader from '@/pages/landing/components/LandingHeader/Index.vue'
 
 export default defineComponent({
   name: 'LandingPage',
 
   components: {
-    ColorModeToggle,
+    Navbar,
+    LandingHeader,
   },
 })
