@@ -16,6 +16,7 @@ This project uses:
 - **ESLint**
 - **Oxlint**
 - **Prettier**
+- **Tailwind CSS**
 
 ### Installation
 
@@ -117,3 +118,29 @@ Example:
 ```text
 feat: add crop management
 ```
+
+## CI/CD 🚀
+
+This project uses **GitHub Actions** for continuous integration.
+
+The workflow is defined in [`.github/workflows/ci.yml`](./.github/workflows/ci.yml) and runs on every push and pull request to `dev` and `main`.
+
+The pipeline:
+
+1. Installs dependencies with `npm ci`
+2. Runs `npm audit` for high and critical vulnerabilities
+3. Checks code formatting with Prettier
+4. Runs Oxlint and ESLint
+5. Runs TypeScript type checking
+6. Runs unit tests with Vitest
+7. Builds the application
+
+If any check fails, the pipeline stops and the CI fails.
+
+## THEMING 🎨
+
+This project uses **Tailwind CSS** with semantic design tokens and CSS variables.
+
+Growbase has its own theme for public pages, while business line themes are loaded dynamically from application data.
+
+Themes support both light and dark color schemes.
