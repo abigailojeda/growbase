@@ -2,7 +2,11 @@
 
 <template>
   <div class="min-h-screen bg-background text-text">
-    <Navbar variant="glass" />
+    <Navbar variant="glass">
+      <template #actions>
+        <UserMenu />
+      </template>
+    </Navbar>
 
     <RouterView />
   </div>

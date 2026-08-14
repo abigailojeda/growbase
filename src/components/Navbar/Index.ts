@@ -9,14 +9,18 @@ export default defineComponent({
   name: 'AppNavbar',
 
   components: {
-    Logo,
     ColorModeToggle,
+    Logo,
   },
 
   props: {
     variant: {
       type: String as PropType<NavbarVariant>,
       default: 'plain',
+    },
+    logoTo: {
+      type: String,
+      default: undefined,
     },
   },
 })

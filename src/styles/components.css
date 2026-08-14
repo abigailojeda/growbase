@@ -1,10 +1,18 @@
 @layer components {
   .glass-surface {
-    @apply bg-background/70 backdrop-blur-md;
+    @apply bg-background/20 backdrop-blur-md;
   }
 
   .primary-btn {
     @apply inline-flex cursor-pointer items-center justify-center rounded-lg bg-primary px-6 py-3 font-medium text-white;
+  }
+
+  .btn-outline {
+    @apply rounded-lg border border-primary px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10;
+  }
+
+  .btn-outline-secondary {
+    @apply rounded-lg border border-primary/40 px-5 py-2 text-sm font-medium text-text transition-colors hover:bg-primary/10;
   }
 
   .icon-btn {
@@ -12,7 +20,15 @@
   }
 
   .landing-hero-background {
-    background-image: url('/images/landing1.jpg');
+    background-image:
+      linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--theme-surface) 90%, transparent) 0%,
+        color-mix(in srgb, var(--theme-surface) 55%, transparent) 40%,
+        color-mix(in srgb, var(--theme-surface) 10%, transparent) 100%
+      ),
+      url('/images/landing1.jpg');
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,5 +36,20 @@
 
   .landing-hero-mobile-position {
     background-position: center 55%;
+  }
+
+  .login-background {
+    background-image:
+      linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--theme-surface) 90%, transparent) 0%,
+        color-mix(in srgb, var(--theme-surface) 55%, transparent) 60%,
+        color-mix(in srgb, var(--theme-surface) 10%, transparent) 100%
+      ),
+      url('/images/test1.jpg');
+
+    background-size: cover;
+    background-position: center 60%;
+    background-repeat: no-repeat;
   }
 }

@@ -2,15 +2,15 @@
 
 <template>
   <section class="w-full overflow-hidden rounded-xl bg-surface shadow-sm">
-    <header class="flex items-center gap-4 border-b border-secondary/30 px-6 py-6">
+    <header class="flex items-center gap-4 border-b border-primary/20 px-6 py-6">
       <div
-        class="flex size-12 shrink-0 items-center justify-center rounded-full bg-secondary/30 text-primary"
+        class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"
       >
-        <!-- Accounts icon -->
+        <AccountsIcons />
       </div>
 
       <div>
-        <h1 class="text-xl font-semibold text-text">Sample accounts</h1>
+        <h1 class="text-xl font-semibold text-text">Demo accounts</h1>
 
         <p class="mt-1 text-sm text-text/60">Explore Growbase with different business lines</p>
       </div>
@@ -25,15 +25,15 @@
       />
     </div>
 
-    <footer class="flex items-center gap-3 bg-secondary/10 px-6 py-4">
+    <footer class="flex items-center gap-3 border-t border-primary/20 px-6 py-4">
       <div
-        class="flex size-9 shrink-0 items-center justify-center rounded-full bg-secondary/30 text-primary"
+        class="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"
       >
-        <!-- Leaf icon -->
+        <InfoIcon />
       </div>
 
       <p class="text-xs text-text/60">
-        These sample accounts are for exploration only. No real data will be changed.
+        These demo accounts are for exploration only. No real data will be changed.
       </p>
     </footer>
   </section>

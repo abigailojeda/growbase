@@ -2,15 +2,20 @@
 
 <template>
   <header
-    class="flex fixed z-10 w-full items-center justify-between px-6 py-4"
-    :class="{ 'glass-surface ': variant === 'glass' }"
+    class="fixed z-10 flex w-full items-center justify-between px-6 py-4"
+    :class="{ 'glass-surface': variant === 'glass' }"
   >
-    <div>
+    <RouterLink v-if="logoTo" :to="logoTo" aria-label="Go to Growbase home">
+      <Logo variant="symbol" class="text-primary sm:hidden" />
+      <Logo class="hidden text-primary sm:block" />
+    </RouterLink>
+
+    <div v-else>
       <Logo variant="symbol" class="text-primary sm:hidden" />
       <Logo class="hidden text-primary sm:block" />
     </div>
 
-    <div class="flex gap-4 items-center">
+    <div class="flex items-center gap-4">
       <ColorModeToggle />
 
       <slot name="actions" />

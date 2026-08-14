@@ -30,7 +30,13 @@ export default defineComponent({
       isOpen.value = false
     }
 
+    const handleLogin = async () => {
+      closeMenu()
+      await router.push('/login')
+    }
+
     const handleLogout = async () => {
+      closeMenu()
       authStore.logout()
       await router.replace('/login')
     }
@@ -62,6 +68,7 @@ export default defineComponent({
       isOpen,
       menuRef,
       toggleMenu,
+      handleLogin,
       handleLogout,
     }
   },

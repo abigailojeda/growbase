@@ -29,10 +29,15 @@ describe('UserMenu', () => {
     mocks.replace.mockClear()
   })
 
-  it('does not render when there is no authenticated user', () => {
+  it('shows the login option when there is no authenticated user', async () => {
     const wrapper = mount(UserMenu)
 
-    expect(wrapper.find('button').exists()).toBe(false)
+    await wrapper.get('[aria-label="Open user menu"]').trigger('click')
+
+    const menu = wrapper.get('[role="menu"]')
+
+    expect(menu.text()).toContain('Login')
+    expect(menu.text()).not.toContain('Logout')
   })
 
   it('opens the menu and displays the current user', async () => {

@@ -1,12 +1,13 @@
 <script lang="ts" src="./Index.ts"></script>
 
 <template>
-  <Navbar>
-    <template #actions>
-      <UserMenu />
-    </template>
-  </Navbar>
   <div class="min-h-screen bg-background text-text">
+    <Navbar>
+      <template #actions>
+        <UserMenu />
+      </template>
+    </Navbar>
+
     <RouterView />
   </div>
 </template>

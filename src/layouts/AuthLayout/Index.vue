@@ -2,7 +2,7 @@
 
 <template>
   <div class="min-h-screen bg-background text-text">
-    <Navbar />
+    <Navbar logo-to="/" />
 
     <RouterView />
   </div>
