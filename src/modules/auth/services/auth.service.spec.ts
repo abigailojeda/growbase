@@ -13,4 +13,15 @@ describe('authService', () => {
       role: 'admin',
     })
   })
+
+  it('returns a user by id', async () => {
+    const user = await authService.getById('vineyard-admin')
+
+    expect(user).toEqual({
+      id: 'vineyard-admin',
+      name: 'Vineyard Admin',
+      businessLineId: 'vineyard',
+      role: 'admin',
+    })
+  })
 })

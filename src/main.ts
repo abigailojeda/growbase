@@ -1,18 +1,25 @@
-import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { createApp } from 'vue'
 
 import App from './App.vue'
-import router from './router'
+import { useAuthSession } from '@/composables/useAuthSession/useAuthSession'
 import { useColorMode } from '@/composables/useColorMode/useColorMode'
+import router from '@/router'
 
 import './styles/main.css'
 
-const app = createApp(App)
-const pinia = createPinia()
+const bootstrap = async () => {
+  const app = createApp(App)
+  const pinia = createPinia()
 
-app.use(pinia)
-app.use(router)
+  app.use(pinia)
 
-useColorMode()
+  useColorMode()
+  await useAuthSession()
 
-app.mount('#app')
+  app.use(router)
+
+  app.mount('#app')
+}
+
+void bootstrap()

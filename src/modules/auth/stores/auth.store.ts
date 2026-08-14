@@ -25,9 +25,23 @@ export const useAuthStore = defineStore('auth', () => {
     currentUser.value = null
   }
 
+  const restoreSession = async (userId: string) => {
+    const user = await authService.getById(userId)
+
+    if (!user) {
+      currentUser.value = null
+      return false
+    }
+
+    currentUser.value = user
+
+    return true
+  }
+
   return {
     currentUser,
     isAuthenticated,
+    restoreSession,
     loginDemo,
     logout,
   }
