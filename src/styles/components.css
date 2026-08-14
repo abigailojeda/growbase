@@ -7,6 +7,10 @@
     @apply inline-flex cursor-pointer items-center justify-center rounded-lg bg-primary px-6 py-3 font-medium text-white;
   }
 
+  .icon-btn {
+    @apply flex size-10 cursor-pointer items-center justify-center rounded-full text-primary transition-colors hover:bg-primary/10 active:bg-primary/20;
+  }
+
   .landing-hero-background {
     background-image: url('/images/landing1.jpg');
     background-size: cover;

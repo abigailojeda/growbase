@@ -6,8 +6,16 @@ import { useAuthStore } from '@/modules/auth/stores/auth.store'
 import { businessLineService } from '@/modules/businessLines/services/businessLine.service'
 import type { BusinessLine } from '@/modules/businessLines/types'
 
+import Navbar from '@/components/Navbar/Index.vue'
+import UserMenu from '@/modules/auth/components/UserMenu/Index.vue'
+
 export default defineComponent({
   name: 'AppLayout',
+
+  components: {
+    Navbar,
+    UserMenu,
+  },
 
   setup() {
     const authStore = useAuthStore()

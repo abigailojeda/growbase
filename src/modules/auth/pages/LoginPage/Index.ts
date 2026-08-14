@@ -28,7 +28,7 @@ export default defineComponent({
       const loggedIn = await authStore.loginDemo(businessLineId, role)
 
       if (loggedIn) {
-        await router.push('/app')
+        await router.replace('/app')
       }
     }
 
