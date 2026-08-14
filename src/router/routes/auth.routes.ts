@@ -4,6 +4,9 @@ export const authRoutes: RouteRecordRaw[] = [
   {
     path: '/login',
     component: () => import('@/layouts/AuthLayout/Index.vue'),
+    meta: {
+      guestOnly: true,
+    },
     children: [
       {
         path: '',

@@ -1,9 +1,14 @@
 import type { BusinessLine } from '@/modules/businessLines/types'
 
+import fieldsIconUrl from '@/assets/images/business-lines/tree-alt.svg'
+import greenhouseIconUrl from '@/assets/images/business-lines/plant-pot.svg'
+import vineyardIconUrl from '@/assets/images/business-lines/cherry.svg'
+
 export const businessLines = [
   {
     id: 'vineyard',
     name: 'Vineyard',
+    iconUrl: vineyardIconUrl,
     theme: {
       light: {
         primary: '#7C3F58',
@@ -24,6 +29,7 @@ export const businessLines = [
   {
     id: 'greenhouse',
     name: 'Greenhouse',
+    iconUrl: greenhouseIconUrl,
     theme: {
       light: {
         primary: '#3D7A57',
@@ -44,6 +50,7 @@ export const businessLines = [
   {
     id: 'fields',
     name: 'Open Fields',
+    iconUrl: fieldsIconUrl,
     theme: {
       light: {
         primary: '#71834A',

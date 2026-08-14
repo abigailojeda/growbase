@@ -1,7 +1,6 @@
 <script lang="ts" src="./Index.ts"></script>
 
 <template>
-  <Navbar />
   <LandingHeader />
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatibus dolores officiis
