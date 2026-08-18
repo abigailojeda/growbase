@@ -22,6 +22,8 @@ export const cropService = {
 
     crop.coverImageId = imageId
 
-    return crop
+    return {
+      ...crop,
+    }
   },
 }

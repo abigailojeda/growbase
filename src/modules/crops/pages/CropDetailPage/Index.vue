@@ -1,7 +1,14 @@
 <script lang="ts" src="./Index.ts"></script>
 
 <template>
-  <section v-if="crop" class="p-6">
+  <section v-if="crop">
+    <RouterLink
+      to="/app/crops"
+      class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-70"
+    >
+      <ArrowIcon class="size-5" />
+      <span>Back to crops</span>
+    </RouterLink>
     <div class="overflow-hidden rounded-xl bg-surface">
       <div class="p-6">
         <div class="flex items-start justify-between gap-4">
@@ -18,12 +25,13 @@
           </span>
         </div>
 
-        <CropGallery
+        <ImageGallery
           :images="crop.images"
-          :cover-image-id="crop.coverImageId"
+          :featured-image-id="crop.coverImageId"
           :alt="crop.name"
           :editable="isAdmin"
-          @set-cover="setCoverImage"
+          featured-label="cover image"
+          :on-set-featured="setCoverImage"
         />
 
         <div class="mt-8">

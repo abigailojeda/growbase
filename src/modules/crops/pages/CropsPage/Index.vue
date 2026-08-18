@@ -1,7 +1,7 @@
 <script lang="ts" src="./Index.ts"></script>
 
 <template>
-  <section class="p-6">
+  <section>
     <h1 class="text-2xl font-semibold text-text">Crops</h1>
 
     <p v-if="!crops.length" class="mt-6 text-text/60">No crops available.</p>
