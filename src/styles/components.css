@@ -52,4 +52,36 @@
     background-position: center 60%;
     background-repeat: no-repeat;
   }
+
+  .crop-health-badge {
+    @apply rounded-full px-3 py-1 text-xs font-medium;
+  }
+
+  .crop-health-good {
+    @apply bg-green-500/15 text-green-600 dark:text-green-400;
+  }
+
+  .crop-health-warning {
+    @apply bg-amber-500/15 text-amber-600 dark:text-amber-400;
+  }
+
+  .crop-health-critical {
+    @apply bg-red-500/15 text-red-600 dark:text-red-400;
+  }
+
+  .crop-health-no-data {
+    @apply bg-text/10 text-text/60;
+  }
+
+  .crop-status-badge {
+    @apply rounded-full px-3 py-1 text-xs font-medium capitalize;
+  }
+
+  .crop-status-active {
+    @apply bg-primary/10 text-primary;
+  }
+
+  .crop-status-inactive {
+    @apply bg-text/10 text-text/60;
+  }
 }

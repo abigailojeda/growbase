@@ -2,20 +2,17 @@
 
 <template>
   <section class="p-6">
-    <h1 class="text-2xl font-semibold">Crops</h1>
+    <h1 class="text-2xl font-semibold text-text">Crops</h1>
 
-    <div class="mt-6">
-      <p v-if="!crops.length" class="opacity-60">No crops available.</p>
+    <p v-if="!crops.length" class="mt-6 text-text/60">No crops available.</p>
 
-      <ul v-else class="space-y-3">
-        <li v-for="crop in crops" :key="crop.id" class="rounded-lg bg-surface p-4">
-          <h2 class="font-semibold">
-            {{ crop.name }}
-          </h2>
-
-          <p class="text-sm opacity-60">{{ crop.type }} · {{ crop.location }}</p>
-        </li>
-      </ul>
+    <div v-else class="mt-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <CropCard
+        v-for="crop in crops"
+        :key="crop.id"
+        :crop="crop"
+        :report="latestReports[crop.id]"
+      />
     </div>
   </section>
 </template>
