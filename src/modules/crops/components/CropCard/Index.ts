@@ -20,6 +20,12 @@ export default defineComponent({
   setup(props) {
     const { health } = useCropHealth(toRef(props, 'crop'), toRef(props, 'report'))
 
+    const coverImage = computed(
+      () =>
+        props.crop.images.find((image) => image.id === props.crop.coverImageId) ??
+        props.crop.images[0],
+    )
+
     const healthLabel = computed(() => {
       if (!health.value) {
         return 'No data'
@@ -37,6 +43,7 @@ export default defineComponent({
     )
 
     return {
+      coverImage,
       healthLabel,
       healthClass,
     }

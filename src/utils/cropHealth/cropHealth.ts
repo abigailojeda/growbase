@@ -4,7 +4,7 @@ export type CropHealth = 'good' | 'warning' | 'critical'
 
 const CRITICAL_TOLERANCE = 0.2
 
-const getMeasurementHealth = (value: number, range: MeasurementRange): CropHealth => {
+export const calculateMeasurementHealth = (value: number, range: MeasurementRange): CropHealth => {
   if (value >= range.min && value <= range.max) {
     return 'good'
   }
@@ -24,12 +24,9 @@ export const calculateCropHealth = (
   measurements: CropMeasurements,
   optimalConditions: OptimalConditions,
 ): CropHealth => {
-  const healthStatuses = [
-    getMeasurementHealth(measurements.temperature, optimalConditions.temperature),
-    getMeasurementHealth(measurements.humidity, optimalConditions.humidity),
-    getMeasurementHealth(measurements.soilMoisture, optimalConditions.soilMoisture),
-    getMeasurementHealth(measurements.ph, optimalConditions.ph),
-  ]
+  const healthStatuses = (Object.keys(measurements) as Array<keyof CropMeasurements>).map((key) =>
+    calculateMeasurementHealth(measurements[key], optimalConditions[key]),
+  )
 
   if (healthStatuses.includes('critical')) {
     return 'critical'

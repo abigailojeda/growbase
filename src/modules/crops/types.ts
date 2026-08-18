@@ -12,13 +12,19 @@ export interface OptimalConditions {
   ph: MeasurementRange
 }
 
+export interface CropImage {
+  id: string
+  url: string
+}
+
 export interface Crop {
   id: string
   businessLineId: string
   name: string
   type: string
   location: string
-  imageUrl: string
+  images: CropImage[]
+  coverImageId?: string
   status: CropStatus
   assignedUserIds: string[]
   optimalConditions: OptimalConditions

@@ -1,5 +1,21 @@
 import type { Crop } from '@/modules/crops/types'
 
+import vineyardNorth1 from '@/assets/images/crops/vineyardNorth1.jpg'
+import vineyardNorth2 from '@/assets/images/crops/vineyardNorth2.jpg'
+import vineyardNorth3 from '@/assets/images/crops/vineyardNorth3.jpg'
+import vineyardSouth1 from '@/assets/images/crops/vineyardSouth1.jpg'
+import greenhouseTomatoes1 from '@/assets/images/crops/greenhouseTomatoes1.jpg'
+import greenhouseTomatoes2 from '@/assets/images/crops/greenhouseTomatoes2.jpg'
+import greenhouseTomatoes3 from '@/assets/images/crops/greenhouseTomatoes3.jpg'
+import greenhouseTomatoes4 from '@/assets/images/crops/greenhouseTomatoes4.jpg'
+import greenhouseStrawberries1 from '@/assets/images/crops/greenhouseStrawberries1.jpg'
+import greenhouseStrawberries2 from '@/assets/images/crops/greenhouseStrawberries2.jpg'
+import fieldsCorn1 from '@/assets/images/crops/fieldsCorn1.jpg'
+import fieldsCorn2 from '@/assets/images/crops/fieldsCorn2.jpg'
+import fieldsPotatoes1 from '@/assets/images/crops/fieldsPotatoes1.jpg'
+import fieldsPotatoes2 from '@/assets/images/crops/fieldsPotatoes2.jpg'
+import fieldsPotatoes3 from '@/assets/images/crops/fieldsPotatoes3.jpg'
+
 export const crops: Crop[] = [
   {
     id: 'vineyard-north',
@@ -7,7 +23,21 @@ export const crops: Crop[] = [
     name: 'North Vineyard',
     type: 'Grapes',
     location: 'North Field',
-    imageUrl: '',
+    images: [
+      {
+        id: 'vineyard-north-1',
+        url: vineyardNorth1,
+      },
+      {
+        id: 'vineyard-north-2',
+        url: vineyardNorth2,
+      },
+      {
+        id: 'vineyard-north-3',
+        url: vineyardNorth3,
+      },
+    ],
+    coverImageId: 'vineyard-north-1',
     status: 'active',
     assignedUserIds: ['vineyard-worker'],
     optimalConditions: {
@@ -23,7 +53,13 @@ export const crops: Crop[] = [
     name: 'South Vineyard',
     type: 'Grapes',
     location: 'South Field',
-    imageUrl: '',
+    images: [
+      {
+        id: 'vineyard-south-1',
+        url: vineyardSouth1,
+      },
+    ],
+    coverImageId: 'vineyard-south-1',
     status: 'active',
     assignedUserIds: [],
     optimalConditions: {
@@ -39,7 +75,25 @@ export const crops: Crop[] = [
     name: 'Tomato Greenhouse',
     type: 'Tomatoes',
     location: 'Greenhouse A',
-    imageUrl: '',
+    images: [
+      {
+        id: 'greenhouse-tomatoes-1',
+        url: greenhouseTomatoes1,
+      },
+      {
+        id: 'greenhouse-tomatoes-2',
+        url: greenhouseTomatoes2,
+      },
+      {
+        id: 'greenhouse-tomatoes-3',
+        url: greenhouseTomatoes3,
+      },
+      {
+        id: 'greenhouse-tomatoes-4',
+        url: greenhouseTomatoes4,
+      },
+    ],
+    coverImageId: 'greenhouse-tomatoes-1',
     status: 'active',
     assignedUserIds: ['greenhouse-worker'],
     optimalConditions: {
@@ -55,7 +109,17 @@ export const crops: Crop[] = [
     name: 'Strawberry Greenhouse',
     type: 'Strawberries',
     location: 'Greenhouse B',
-    imageUrl: '',
+    images: [
+      {
+        id: 'greenhouse-strawberries-1',
+        url: greenhouseStrawberries1,
+      },
+      {
+        id: 'greenhouse-strawberries-2',
+        url: greenhouseStrawberries2,
+      },
+    ],
+    coverImageId: 'greenhouse-strawberries-1',
     status: 'active',
     assignedUserIds: [],
     optimalConditions: {
@@ -71,7 +135,21 @@ export const crops: Crop[] = [
     name: 'Potato Field',
     type: 'Potatoes',
     location: 'Field 1',
-    imageUrl: '',
+    images: [
+      {
+        id: 'fields-potatoes-1',
+        url: fieldsPotatoes1,
+      },
+      {
+        id: 'fields-potatoes-2',
+        url: fieldsPotatoes2,
+      },
+      {
+        id: 'fields-potatoes-3',
+        url: fieldsPotatoes3,
+      },
+    ],
+    coverImageId: 'fields-potatoes-1',
     status: 'active',
     assignedUserIds: ['fields-worker'],
     optimalConditions: {
@@ -87,7 +165,17 @@ export const crops: Crop[] = [
     name: 'Corn Field',
     type: 'Corn',
     location: 'Field 2',
-    imageUrl: '',
+    images: [
+      {
+        id: 'fields-corn-1',
+        url: fieldsCorn1,
+      },
+      {
+        id: 'fields-corn-2',
+        url: fieldsCorn2,
+      },
+    ],
+    coverImageId: 'fields-corn-1',
     status: 'active',
     assignedUserIds: [],
     optimalConditions: {

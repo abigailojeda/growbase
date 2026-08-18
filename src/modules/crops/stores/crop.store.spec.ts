@@ -10,7 +10,16 @@ const crop: Crop = {
   name: 'North Vineyard',
   type: 'Grapes',
   location: 'North Field',
-  imageUrl: '',
+  images: [
+    {
+      id: 'image-1',
+      url: 'https://example.com/image1.jpg',
+    },
+    {
+      id: 'image-2',
+      url: 'https://example.com/image2.jpg',
+    },
+  ],
   status: 'active',
   assignedUserIds: ['vineyard-worker'],
   optimalConditions: {

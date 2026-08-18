@@ -17,6 +17,11 @@ export const appRoutes: RouteRecordRaw[] = [
         path: 'crops',
         component: () => import('@/modules/crops/pages/CropsPage/Index.vue'),
       },
+      {
+        path: 'crops/:id',
+        name: 'crop-detail',
+        component: () => import('@/modules/crops/pages/CropDetailPage/Index.vue'),
+      },
     ],
   },
 ]
