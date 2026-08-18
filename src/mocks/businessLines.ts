@@ -13,7 +13,7 @@ export const businessLines = [
       light: {
         primary: '#7C3F58',
         secondary: '#C99AA8',
-        background: '#FAF7F8',
+        background: '#e0d7da',
         surface: '#FFFFFF',
         text: '#271F22',
       },
@@ -34,7 +34,7 @@ export const businessLines = [
       light: {
         primary: '#3D7A57',
         secondary: '#A8CCB5',
-        background: '#F5F9F6',
+        background: '#cfd5d1',
         surface: '#FFFFFF',
         text: '#1E2922',
       },

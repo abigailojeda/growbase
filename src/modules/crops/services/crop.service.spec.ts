@@ -1,0 +1,18 @@
+import { describe, expect, it } from 'vitest'
+import { cropService } from './crop.service'
+
+describe('cropService', () => {
+  it('returns crops from a business line', async () => {
+    const crops = await cropService.getByBusinessLine('vineyard')
+
+    expect(crops).toHaveLength(2)
+    expect(crops.every((crop) => crop.businessLineId === 'vineyard')).toBe(true)
+  })
+
+  it('returns crops assigned to a user', async () => {
+    const crops = await cropService.getAssignedToUser('vineyard-worker')
+
+    expect(crops).toHaveLength(1)
+    expect(crops[0]?.id).toBe('vineyard-north')
+  })
+})

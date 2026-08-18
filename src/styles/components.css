@@ -52,4 +52,76 @@
     background-position: center 60%;
     background-repeat: no-repeat;
   }
+
+  .crop-health-badge {
+    @apply rounded-full px-3 py-1 text-xs font-medium;
+  }
+
+  .crop-health-good {
+    @apply bg-green-500/15 text-green-600 dark:text-green-400;
+  }
+
+  .crop-health-warning {
+    @apply bg-amber-500/15 text-amber-600 dark:text-amber-400;
+  }
+
+  .crop-health-critical {
+    @apply bg-red-500/15 text-red-600 dark:text-red-400;
+  }
+
+  .crop-health-no-data {
+    @apply bg-text/10 text-text/60;
+  }
+
+  .crop-status-badge {
+    @apply rounded-full px-3 py-1 text-xs font-medium capitalize;
+  }
+
+  .crop-status-active {
+    @apply bg-primary/10 text-primary;
+  }
+
+  .crop-status-inactive {
+    @apply bg-text/10 text-text/60;
+  }
+
+  .crop-measurement {
+    @apply rounded-lg border p-4;
+  }
+
+  .crop-measurement-good {
+    @apply border-green-500/30 bg-green-500/5;
+  }
+
+  .crop-measurement-warning {
+    @apply border-amber-500/30 bg-amber-500/5;
+  }
+
+  .crop-measurement-critical {
+    @apply border-red-500/30 bg-red-500/5;
+  }
+
+  .crop-measurement-value-good {
+    @apply text-green-600 dark:text-green-400;
+  }
+
+  .crop-measurement-value-warning {
+    @apply text-amber-600 dark:text-amber-400;
+  }
+
+  .crop-measurement-value-critical {
+    @apply text-red-600 dark:text-red-400;
+  }
+
+  .crop-image-thumbnail {
+    @apply relative shrink-0 overflow-hidden rounded-lg border border-text/10;
+  }
+
+  .crop-image-thumbnail-cover {
+    @apply border-primary ring-2 ring-primary/20;
+  }
+
+  .crop-image-cover-label {
+    @apply absolute bottom-2 left-2 rounded-full bg-primary px-3 py-1 text-xs font-medium text-white;
+  }
 }
