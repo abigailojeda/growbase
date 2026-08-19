@@ -5,7 +5,7 @@ export const growbaseTheme: Theme = {
     primary: '#4F6F52',
     secondary: '#D2E3C8',
     background: '#c6cbc3',
-    surface: '#D6DCD3',
+    surface: '#FFFFFF',
     text: '#1F2937',
   },
 

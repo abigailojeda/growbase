@@ -18,7 +18,7 @@ const theme: Theme = {
     primary: '#111111',
     secondary: '#222222',
     background: '#333333',
-    surface: '#444444',
+    surface: '#FFFFFF',
     text: '#555555',
   },
   dark: {
