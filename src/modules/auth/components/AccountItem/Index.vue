@@ -12,9 +12,11 @@
       </div>
 
       <div class="min-w-0 flex-1">
-        <h2 class="text-lg font-semibold text-text">
-          {{ businessLine.name }}
-        </h2>
+        <img
+          :src="businessLine.logoUrl"
+          :alt="`${businessLine.name} logo`"
+          class="h-10 max-w-full object-contain"
+        />
       </div>
     </div>
 

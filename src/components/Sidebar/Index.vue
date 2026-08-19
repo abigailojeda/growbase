@@ -21,8 +21,8 @@
     :class="[mobileOpen ? 'w-full translate-x-0' : '-translate-x-full', 'md:translate-x-0']"
   >
     <div class="flex justify-between gap-2 px-4 py-6">
-      <RouterLink to="/app" aria-label="Go to Growbase home">
-        <Logo :variant="mobileOpen ? 'full' : collapsed ? 'symbol' : 'full'" class="text-primary" />
+      <RouterLink v-if="!collapsed" to="/app" aria-label="Go to Growbase home">
+        <Logo :variant="'full'" class="text-primary" />
       </RouterLink>
 
       <!-- MOBILE -->
@@ -44,6 +44,16 @@
       </button>
     </div>
 
-    <div class="flex-1 overflow-y-auto"></div>
+    <div class="flex-1 overflow-y-auto">
+      <!-- Menu -->
+    </div>
+
+    <div class="mt-auto flex justify-center px-4 py-6">
+      <img
+        :src="collapsed ? businessLine.iconUrl : businessLine.logoUrl"
+        :alt="collapsed ? `${businessLine.name} icon` : `${businessLine.name} logo`"
+        :class="['object-contain', collapsed ? 'size-10' : 'max-h-12 max-w-full']"
+      />
+    </div>
   </aside>
 </template>

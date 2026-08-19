@@ -7,7 +7,12 @@
         <UserMenu />
       </template>
     </Navbar>
-    <Sidebar v-model:collapsed="isSidebarCollapsed" v-model:mobile-open="isSidebarMobileOpen" />
+    <Sidebar
+      v-if="activeBusinessLine"
+      v-model:collapsed="isSidebarCollapsed"
+      v-model:mobile-open="isSidebarMobileOpen"
+      :business-line="activeBusinessLine"
+    />
 
     <main
       :class="[
