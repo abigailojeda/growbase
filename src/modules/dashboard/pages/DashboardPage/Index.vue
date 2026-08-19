@@ -1,7 +1,5 @@
 <script lang="ts" src="./Index.ts"></script>
 
 <template>
-  <main>
-    <h1>Dashboard</h1>
-  </main>
+  <main></main>
 </template>

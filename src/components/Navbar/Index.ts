@@ -3,7 +3,7 @@ import { defineComponent, type PropType } from 'vue'
 import ColorModeToggle from '@/components/ColorModeToggle/Index.vue'
 import Logo from '@/components/Logo/Index.vue'
 
-type NavbarVariant = 'glass' | 'plain'
+type NavbarVariant = 'glass' | 'glass-mobile' | 'plain'
 
 export default defineComponent({
   name: 'AppNavbar',
@@ -21,6 +21,10 @@ export default defineComponent({
     logoTo: {
       type: String,
       default: undefined,
+    },
+    showLogo: {
+      type: Boolean,
+      default: true,
     },
   },
 })

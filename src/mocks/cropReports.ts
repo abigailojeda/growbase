@@ -31,7 +31,7 @@ export const cropReports: CropReport[] = [
     id: 'report-greenhouse-tomatoes-1',
     cropId: 'greenhouse-tomatoes',
     measurements: {
-      temperature: 29,
+      temperature: 28,
       humidity: 68,
       soilMoisture: 72,
       ph: 6.3,
