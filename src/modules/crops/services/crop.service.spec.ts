@@ -12,7 +12,7 @@ describe('cropService', () => {
   it('returns crops assigned to a user', async () => {
     const crops = await cropService.getAssignedToUser('vineyard-worker')
 
-    expect(crops).toHaveLength(1)
-    expect(crops[0]?.id).toBe('vineyard-north')
+    expect(crops.length).toBeGreaterThan(0)
+    expect(crops.every((crop) => crop.assignedUserIds.includes('vineyard-worker'))).toBe(true)
   })
 })

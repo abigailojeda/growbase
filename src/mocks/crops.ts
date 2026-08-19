@@ -4,12 +4,14 @@ import vineyardNorth1 from '@/assets/images/crops/vineyardNorth1.jpg'
 import vineyardNorth2 from '@/assets/images/crops/vineyardNorth2.jpg'
 import vineyardNorth3 from '@/assets/images/crops/vineyardNorth3.jpg'
 import vineyardSouth1 from '@/assets/images/crops/vineyardSouth1.jpg'
+
 import greenhouseTomatoes1 from '@/assets/images/crops/greenhouseTomatoes1.jpg'
 import greenhouseTomatoes2 from '@/assets/images/crops/greenhouseTomatoes2.jpg'
 import greenhouseTomatoes3 from '@/assets/images/crops/greenhouseTomatoes3.jpg'
 import greenhouseTomatoes4 from '@/assets/images/crops/greenhouseTomatoes4.jpg'
 import greenhouseStrawberries1 from '@/assets/images/crops/greenhouseStrawberries1.jpg'
 import greenhouseStrawberries2 from '@/assets/images/crops/greenhouseStrawberries2.jpg'
+
 import fieldsCorn1 from '@/assets/images/crops/fieldsCorn1.jpg'
 import fieldsCorn2 from '@/assets/images/crops/fieldsCorn2.jpg'
 import fieldsPotatoes1 from '@/assets/images/crops/fieldsPotatoes1.jpg'
@@ -39,7 +41,7 @@ export const crops: Crop[] = [
     ],
     coverImageId: 'vineyard-north-1',
     status: 'active',
-    assignedUserIds: ['vineyard-worker'],
+    assignedUserIds: ['vineyard-worker', 'vineyard-worker-2', 'vineyard-worker-3'],
     optimalConditions: {
       temperature: { min: 18, max: 28 },
       humidity: { min: 55, max: 75 },
@@ -61,7 +63,7 @@ export const crops: Crop[] = [
     ],
     coverImageId: 'vineyard-south-1',
     status: 'active',
-    assignedUserIds: [],
+    assignedUserIds: ['vineyard-worker-2'],
     optimalConditions: {
       temperature: { min: 18, max: 28 },
       humidity: { min: 55, max: 75 },
@@ -83,7 +85,7 @@ export const crops: Crop[] = [
     ],
     coverImageId: 'vineyard-test001-1',
     status: 'active',
-    assignedUserIds: [],
+    assignedUserIds: ['vineyard-worker', 'vineyard-worker-2', 'vineyard-worker-3'],
     optimalConditions: {
       temperature: { min: 18, max: 28 },
       humidity: { min: 55, max: 75 },
@@ -105,7 +107,7 @@ export const crops: Crop[] = [
     ],
     coverImageId: 'vineyard-test002-1',
     status: 'active',
-    assignedUserIds: [],
+    assignedUserIds: ['vineyard-worker-3'],
     optimalConditions: {
       temperature: { min: 18, max: 28 },
       humidity: { min: 55, max: 75 },
@@ -127,7 +129,7 @@ export const crops: Crop[] = [
     ],
     coverImageId: 'vineyard-test003-1',
     status: 'active',
-    assignedUserIds: [],
+    assignedUserIds: ['vineyard-worker', 'vineyard-worker-2'],
     optimalConditions: {
       temperature: { min: 18, max: 28 },
       humidity: { min: 55, max: 75 },
@@ -161,7 +163,7 @@ export const crops: Crop[] = [
     ],
     coverImageId: 'greenhouse-tomatoes-1',
     status: 'active',
-    assignedUserIds: ['greenhouse-worker'],
+    assignedUserIds: ['greenhouse-worker', 'greenhouse-worker-2', 'greenhouse-worker-3'],
     optimalConditions: {
       temperature: { min: 20, max: 27 },
       humidity: { min: 60, max: 75 },
@@ -187,7 +189,7 @@ export const crops: Crop[] = [
     ],
     coverImageId: 'greenhouse-strawberries-1',
     status: 'active',
-    assignedUserIds: [],
+    assignedUserIds: ['greenhouse-worker-2', 'greenhouse-worker-3'],
     optimalConditions: {
       temperature: { min: 16, max: 24 },
       humidity: { min: 60, max: 75 },
@@ -217,7 +219,7 @@ export const crops: Crop[] = [
     ],
     coverImageId: 'fields-potatoes-1',
     status: 'active',
-    assignedUserIds: ['fields-worker'],
+    assignedUserIds: ['fields-worker', 'fields-worker-2', 'fields-worker-3'],
     optimalConditions: {
       temperature: { min: 15, max: 22 },
       humidity: { min: 60, max: 80 },
@@ -243,7 +245,7 @@ export const crops: Crop[] = [
     ],
     coverImageId: 'fields-corn-1',
     status: 'active',
-    assignedUserIds: [],
+    assignedUserIds: ['fields-worker', 'fields-worker-2'],
     optimalConditions: {
       temperature: { min: 18, max: 30 },
       humidity: { min: 50, max: 70 },

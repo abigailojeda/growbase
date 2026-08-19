@@ -34,7 +34,9 @@ describe('useCrops', () => {
 
     await loadCrops()
 
-    expect(cropStore.crops).toHaveLength(1)
-    expect(cropStore.crops[0]?.id).toBe('vineyard-north')
+    expect(cropStore.crops.length).toBeGreaterThan(0)
+    expect(cropStore.crops.every((crop) => crop.assignedUserIds.includes('vineyard-worker'))).toBe(
+      true,
+    )
   })
 })
