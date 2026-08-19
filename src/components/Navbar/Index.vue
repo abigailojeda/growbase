@@ -4,7 +4,9 @@
   <header
     :class="[
       'fixed top-0 z-10 flex items-center px-6 py-4',
-      showLogo ? 'left-0 w-full justify-between' : 'right-0 w-auto justify-end',
+      showLogo
+        ? 'left-0 w-full justify-between'
+        : 'left-0 w-full justify-end md:left-auto md:right-0 md:w-auto',
       variant === 'glass' && 'glass-surface',
       variant === 'glass-mobile' && 'glass-surface md:bg-transparent md:backdrop-blur-none',
     ]"

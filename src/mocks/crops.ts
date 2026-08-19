@@ -70,6 +70,72 @@ export const crops: Crop[] = [
     },
   },
   {
+    id: 'vineyard-test001',
+    businessLineId: 'vineyard',
+    name: 'Test 001 Vineyard',
+    type: 'Grapes',
+    location: 'South Field',
+    images: [
+      {
+        id: 'vineyard-test001-1',
+        url: vineyardSouth1,
+      },
+    ],
+    coverImageId: 'vineyard-test001-1',
+    status: 'active',
+    assignedUserIds: [],
+    optimalConditions: {
+      temperature: { min: 18, max: 28 },
+      humidity: { min: 55, max: 75 },
+      soilMoisture: { min: 40, max: 65 },
+      ph: { min: 5.5, max: 6.5 },
+    },
+  },
+  {
+    id: 'vineyard-test002',
+    businessLineId: 'vineyard',
+    name: 'Test 002 Vineyard',
+    type: 'Grapes',
+    location: 'South Field',
+    images: [
+      {
+        id: 'vineyard-test002-1',
+        url: vineyardSouth1,
+      },
+    ],
+    coverImageId: 'vineyard-test002-1',
+    status: 'active',
+    assignedUserIds: [],
+    optimalConditions: {
+      temperature: { min: 18, max: 28 },
+      humidity: { min: 55, max: 75 },
+      soilMoisture: { min: 40, max: 65 },
+      ph: { min: 5.5, max: 6.5 },
+    },
+  },
+  {
+    id: 'vineyard-test003',
+    businessLineId: 'vineyard',
+    name: 'Test 003 Vineyard',
+    type: 'Grapes',
+    location: 'South Field',
+    images: [
+      {
+        id: 'vineyard-test003-1',
+        url: vineyardSouth1,
+      },
+    ],
+    coverImageId: 'vineyard-test003-1',
+    status: 'active',
+    assignedUserIds: [],
+    optimalConditions: {
+      temperature: { min: 18, max: 28 },
+      humidity: { min: 55, max: 75 },
+      soilMoisture: { min: 40, max: 65 },
+      ph: { min: 5.5, max: 6.5 },
+    },
+  },
+  {
     id: 'greenhouse-tomatoes',
     businessLineId: 'greenhouse',
     name: 'Tomato Greenhouse',

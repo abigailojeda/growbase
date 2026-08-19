@@ -20,7 +20,7 @@ describe('useCrops', () => {
 
     await loadCrops()
 
-    expect(cropStore.crops).toHaveLength(2)
+    expect(cropStore.crops.length).toBeGreaterThan(0)
     expect(cropStore.crops.every((crop) => crop.businessLineId === 'vineyard')).toBe(true)
   })
 

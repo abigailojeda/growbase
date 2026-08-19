@@ -53,4 +53,43 @@ export const cropReports: CropReport[] = [
     reportedBy: 'fields-worker',
     reportedAt: '2026-08-17T09:10:00.000Z',
   },
+  {
+    id: 'report-vineyard-test-1',
+    cropId: 'vineyard-test001',
+    measurements: {
+      temperature: 36,
+      humidity: 81,
+      soilMoisture: 48,
+      ph: 6.2,
+    },
+    notes: 'Temperature and humidity are above the optimal range.',
+    reportedBy: 'vineyard-worker',
+    reportedAt: '2026-08-19T07:45:00.000Z',
+  },
+  {
+    id: 'report-vineyard-test-2',
+    cropId: 'vineyard-test002',
+    measurements: {
+      temperature: 36,
+      humidity: 71,
+      soilMoisture: 48,
+      ph: 6.2,
+    },
+    notes: 'Temperature and humidity are above the optimal range.',
+    reportedBy: 'vineyard-worker',
+    reportedAt: '2026-08-19T07:45:00.000Z',
+  },
+  {
+    id: 'report-vineyard-test-3',
+    cropId: 'vineyard-test003',
+    measurements: {
+      temperature: 29,
+      humidity: 60,
+      soilMoisture: 48,
+      ph: 5.4,
+    },
+    notes: 'Soil pH is below the optimal range and temperature is above the optimal range.',
+    reportedBy: 'vineyard-worker',
+    reportedAt: '2026-08-19T07:45:00.000Z',
+  },
 ]

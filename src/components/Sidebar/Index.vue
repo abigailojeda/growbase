@@ -10,7 +10,7 @@
       <Logo variant="symbol" class="text-primary" />
     </RouterLink>
 
-    <button type="button" class="icon-btn" aria-label="Open menu" @click="openMobile">
+    <button type="button" class="icon-btn mt-1" aria-label="Open menu" @click="openMobile">
       <MenuIcon />
     </button>
   </div>
@@ -20,7 +20,7 @@
     class="fixed inset-y-0 left-0 z-50 flex flex-col bg-surface transition-[width,transform] duration-300"
     :class="[mobileOpen ? 'w-full translate-x-0' : '-translate-x-full', 'md:translate-x-0']"
   >
-    <div class="flex items-center justify-between px-4 py-4">
+    <div class="flex justify-between gap-2 px-4 py-6">
       <RouterLink to="/app" aria-label="Go to Growbase home">
         <Logo :variant="mobileOpen ? 'full' : collapsed ? 'symbol' : 'full'" class="text-primary" />
       </RouterLink>
@@ -33,7 +33,10 @@
       <!-- DESKTOP -->
       <button
         type="button"
-        class="icon-btn hidden md:flex h-8 w-8 p-1.5 rounded-full"
+        :class="[
+          'icon-btn bg-primary/20 hidden md:flex h-8 w-8 p-1.5 rounded-full',
+          !collapsed ? 'mt-1' : '',
+        ]"
         aria-label="Toggle sidebar"
         @click="toggleCollapsed"
       >

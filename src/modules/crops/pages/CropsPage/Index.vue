@@ -1,6 +1,13 @@
 <script lang="ts" src="./Index.ts"></script>
 
 <template>
+  <RouterLink
+    to="/app"
+    class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-70"
+  >
+    <ArrowIcon class="size-5" />
+    <span>Back to summary</span>
+  </RouterLink>
   <section>
     <h1 class="text-2xl font-semibold text-text">Crops</h1>
 
