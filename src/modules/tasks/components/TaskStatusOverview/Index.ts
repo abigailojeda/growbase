@@ -3,8 +3,8 @@ import { computed, defineComponent, ref, type PropType } from 'vue'
 import TaskPreview from '@/modules/tasks/components/TaskPreview/Index.vue'
 import type { User } from '@/modules/auth/types'
 import type { Task, TaskStatus, TaskStatusSummary } from '@/modules/tasks/types'
-import BarIcon from '@/components/icons/BarIcon.vue'
 import ListIcon from '@/components/icons/ListIcon.vue'
+import GridIcon from '@/components/icons/GridIcon.vue'
 
 type TaskOverviewView = 'summary' | 'tasks'
 
@@ -19,8 +19,8 @@ export default defineComponent({
 
   components: {
     TaskPreview,
-    BarIcon,
     ListIcon,
+    GridIcon,
   },
 
   props: {

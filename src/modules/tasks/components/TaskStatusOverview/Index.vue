@@ -36,7 +36,7 @@
             :aria-pressed="activeView === 'summary'"
             @click="activeView = 'summary'"
           >
-            <BarIcon class="size-4" />
+            <GridIcon class="size-4" />
           </button>
         </div>
       </div>

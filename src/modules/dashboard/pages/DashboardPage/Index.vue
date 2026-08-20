@@ -25,6 +25,10 @@
       </div>
     </div>
 
+    <div v-if="isAdmin" class="mt-8">
+      <TeamOverview :workers="teamSummaries" />
+    </div>
+
     <div class="mt-8">
       <TaskStatusOverview
         :title="isAdmin ? 'Task overview' : 'My tasks'"
@@ -32,10 +36,6 @@
         :tasks="tasks"
         :workers="isAdmin ? workers : []"
       />
-    </div>
-
-    <div v-if="isAdmin" class="mt-8">
-      <TeamOverview :workers="teamSummaries" />
     </div>
   </section>
 </template>
