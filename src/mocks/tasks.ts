@@ -366,7 +366,7 @@ export const tasks: Task[] = [
     createdAt: '2026-08-19T10:30:00.000Z',
   },
   {
-    id: 'task-greenhouse-worker-4',
+    id: 'task-greenhouse-worker-04',
     businessLineId: 'greenhouse',
     cropId: 'greenhouse-tomatoes',
     title: 'Monitor ventilation changes',
@@ -400,7 +400,7 @@ export const tasks: Task[] = [
     createdAt: '2026-08-20T06:45:00.000Z',
   },
   {
-    id: 'task-greenhouse-worker-5',
+    id: 'task-greenhouse-worker-05',
     businessLineId: 'greenhouse',
     cropId: 'greenhouse-tomatoes',
     title: 'Clean ventilation inlets',

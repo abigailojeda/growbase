@@ -2,9 +2,15 @@ import { computed, defineComponent, toRef, type PropType } from 'vue'
 
 import { useCropHealth } from '@/composables/useCropHealth/useCropHealth'
 import type { Crop, CropReport } from '@/modules/crops/types'
+import CropHealthHeader from '@/modules/crops/components/CropHealthHeader/Index.vue'
+import CropStatus from '@/modules/crops/components/CropStatus/Index.vue'
 
 export default defineComponent({
   name: 'CropCard',
+  components: {
+    CropHealthHeader,
+    CropStatus,
+  },
 
   props: {
     crop: {
@@ -26,26 +32,9 @@ export default defineComponent({
         props.crop.images[0],
     )
 
-    const healthLabel = computed(() => {
-      if (!health.value) {
-        return 'No data'
-      }
-
-      return {
-        good: 'Good',
-        warning: 'Warning',
-        critical: 'Critical',
-      }[health.value]
-    })
-
-    const healthClass = computed(() =>
-      health.value ? `crop-health-${health.value}` : 'crop-health-no-data',
-    )
-
     return {
       coverImage,
-      healthLabel,
-      healthClass,
+      health,
     }
   },
 })

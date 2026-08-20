@@ -3,7 +3,7 @@
 <template>
   <section class="flex h-86.25 flex-col rounded-xl bg-surface p-5">
     <div class="flex items-center gap-4">
-      <h2 class="text-2xl font-semibold text-text">Crop health</h2>
+      <h2 class="text-2xl font-semibold text-text">Crops health</h2>
 
       <div class="flex rounded-lg bg-background p-1">
         <button

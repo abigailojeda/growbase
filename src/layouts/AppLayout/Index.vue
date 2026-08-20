@@ -2,7 +2,7 @@
 
 <template>
   <div class="min-h-dvh bg-background">
-    <Navbar :show-logo="false" variant="glass-mobile">
+    <Navbar :show-logo="false" variant="surface">
       <template #actions>
         <UserMenu />
       </template>
@@ -16,7 +16,7 @@
 
     <main
       :class="[
-        'px-6 pt-20 md:pt-8 pb-6 transition-[margin-left] duration-300',
+        'px-6 py-24 transition-[margin-left] duration-300',
         isSidebarCollapsed ? 'md:ml-24' : 'md:ml-56',
       ]"
     >

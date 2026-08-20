@@ -1,4 +1,10 @@
-import type { ChartData, ChartOptions } from 'chart.js'
+import {
+  Tooltip,
+  type ChartData,
+  type ChartOptions,
+  type ChartType,
+  type TooltipPositionerFunction,
+} from 'chart.js'
 import { computed, defineComponent, ref, type PropType } from 'vue'
 
 import BarIcon from '@/components/icons/BarIcon.vue'
@@ -7,6 +13,17 @@ import Chart from '@/components/Chart/Index.vue'
 import type { TeamWorkerTaskSummary } from '@/modules/tasks/types'
 
 type TeamOverviewView = 'cards' | 'chart'
+
+declare module 'chart.js' {
+  interface TooltipPositionerMap {
+    cursor: TooltipPositionerFunction<ChartType>
+  }
+}
+
+Tooltip.positioners.cursor = (_elements, eventPosition) => ({
+  x: eventPosition.x,
+  y: eventPosition.y,
+})
 
 export default defineComponent({
   name: 'TeamOverview',
@@ -62,10 +79,14 @@ export default defineComponent({
       interaction: {
         mode: 'index',
         axis: 'y',
-        intersect: false,
+        intersect: true,
       },
 
       plugins: {
+        tooltip: {
+          position: 'cursor',
+        },
+
         legend: {
           position: 'bottom',
           labels: {
@@ -97,6 +118,7 @@ export default defineComponent({
         },
       },
     }
+
     return {
       activeView,
       chartData,

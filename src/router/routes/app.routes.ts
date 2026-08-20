@@ -27,6 +27,11 @@ export const appRoutes: RouteRecordRaw[] = [
         name: 'tasks',
         component: () => import('@/modules/tasks/pages/TasksPage/Index.vue'),
       },
+      {
+        path: 'reports',
+        name: 'reports',
+        component: () => import('@/modules/reports/pages/ReportsPage/Index.vue'),
+      },
     ],
   },
 ]

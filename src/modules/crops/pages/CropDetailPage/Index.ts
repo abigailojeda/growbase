@@ -10,6 +10,8 @@ import { cropService } from '@/modules/crops/services/crop.service'
 import type { Crop, CropReport } from '@/modules/crops/types'
 import { calculateMeasurementHealth } from '@/utils/cropHealth/cropHealth'
 import ArrowIcon from '@/components/icons/ArrowIcon.vue'
+import CropHealthHeader from '@/modules/crops/components/CropHealthHeader/Index.vue'
+import CropStatus from '@/modules/crops/components/CropStatus/Index.vue'
 
 export default defineComponent({
   name: 'CropDetailPage',
@@ -17,6 +19,8 @@ export default defineComponent({
   components: {
     ImageGallery,
     ArrowIcon,
+    CropHealthHeader,
+    CropStatus,
   },
 
   setup() {
@@ -31,10 +35,6 @@ export default defineComponent({
     const isAdmin = computed(() => authStore.currentUser?.role === 'admin')
 
     const { health } = useCropHealth(crop, latestReport)
-
-    const healthClass = computed(() =>
-      health.value ? `crop-health-${health.value}` : 'crop-health-no-data',
-    )
 
     const measurements = computed(() => {
       if (!crop.value || !latestReport.value) {
@@ -77,7 +77,6 @@ export default defineComponent({
       crop,
       latestReport,
       health,
-      healthClass,
       measurements,
       isAdmin,
       setCoverImage,

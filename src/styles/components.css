@@ -117,11 +117,11 @@
     @apply relative shrink-0 overflow-hidden rounded-lg border border-text/10;
   }
 
-  .crop-image-thumbnail-cover {
-    @apply border-primary ring-2 ring-primary/20;
-  }
-
   .crop-image-cover-label {
     @apply absolute bottom-2 left-2 rounded-full bg-primary px-3 py-1 text-xs font-medium text-white;
+  }
+
+  .crop-health-header {
+    @apply px-4 py-2 text-sm font-semibold capitalize;
   }
 }

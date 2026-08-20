@@ -34,7 +34,7 @@ export default defineComponent({
     const activeView = ref<CropHealthView>('summary')
 
     const chartData = computed<ChartData<'doughnut'>>(() => ({
-      labels: ['Good', 'Warning', 'Critical', 'No data'],
+      labels: ['Good', 'Warning', 'Critical', 'No health data'],
       datasets: [
         {
           data: [

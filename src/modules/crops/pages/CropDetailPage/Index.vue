@@ -9,9 +9,12 @@
       <ArrowIcon class="size-5" />
       <span>Back to crops</span>
     </RouterLink>
+
     <div class="overflow-hidden rounded-xl bg-surface">
+      <CropHealthHeader :health="health" large />
+
       <div class="p-6">
-        <div class="flex items-start justify-between gap-4">
+        <div class="flex items-start flex-col lg:flex-row justify-between gap-4">
           <div>
             <h1 class="text-2xl font-semibold text-text">
               {{ crop.name }}
@@ -20,9 +23,7 @@
             <p class="mt-1 text-text/60">{{ crop.type }} · {{ crop.location }}</p>
           </div>
 
-          <span class="crop-status-badge" :class="`crop-status-${crop.status}`">
-            {{ crop.status }}
-          </span>
+          <CropStatus :status="crop.status" />
         </div>
 
         <ImageGallery
@@ -33,14 +34,6 @@
           featured-label="cover image"
           :on-set-featured="setCoverImage"
         />
-
-        <div class="mt-8">
-          <h2 class="text-lg font-semibold text-text">Crop health</h2>
-
-          <span class="crop-health-badge mt-3 inline-block capitalize" :class="healthClass">
-            {{ health ?? 'No data' }}
-          </span>
-        </div>
 
         <div class="mt-8">
           <h2 class="text-lg font-semibold text-text">Current measurements</h2>
