@@ -43,7 +43,9 @@
             {{ worker.name }}
           </h3>
 
-          <span class="shrink-0 text-sm text-text/60"> {{ worker.total }} tasks </span>
+          <span class="shrink-0 text-sm font-semibold text-text/60">
+            {{ worker.total }} tasks
+          </span>
         </div>
 
         <div class="mt-4 grid grid-cols-3 gap-3">

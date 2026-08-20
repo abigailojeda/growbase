@@ -11,7 +11,7 @@
     </div>
 
     <section v-if="!crops.length" class="mt-6 flex flex-col items-center justify-center gap-3">
-      <div class="flex flex-col items-center justify-center gap-3 bg-green-500/5 rounded-lg p-6">
+      <div class="flex flex-col items-center justify-center gap-3 p-6">
         <img
           src="@/assets/images/business-lines/sapling.svg"
           alt="No crops needing attention"

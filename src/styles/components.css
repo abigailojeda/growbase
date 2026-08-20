@@ -8,11 +8,11 @@
   }
 
   .btn-outline {
-    @apply rounded-lg border border-primary px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10;
+    @apply rounded-lg border border-primary cursor-pointer px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10;
   }
 
   .btn-outline-secondary {
-    @apply rounded-lg border border-primary/40 px-5 py-2 text-sm font-medium text-text transition-colors hover:bg-primary/10;
+    @apply rounded-lg border border-primary/40 cursor-pointer px-5 py-2 text-sm font-medium text-text transition-colors hover:bg-primary/10;
   }
 
   .icon-btn {

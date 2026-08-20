@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <RouterLink to="/app/" class="font-medium text-primary"> Go to tasks </RouterLink>
+      <RouterLink to="/app/tasks" class="font-medium text-primary"> Go to tasks </RouterLink>
     </div>
 
     <div v-if="activeView === 'tasks'" class="mt-6 grid gap-6 lg:grid-cols-3">

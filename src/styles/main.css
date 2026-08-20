@@ -3,24 +3,21 @@
 @import './components.css';
 
 /* SCROLLBAR */
-/* width */
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #f1e8e8;
+  background: transparent;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #dad8d8;
-  border-radius: 10px;
+  background: color-mix(in srgb, var(--theme-text) 18%, transparent);
+  border-radius: 9999px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #929292;
+  background: color-mix(in srgb, var(--theme-text) 32%, transparent);
 }
