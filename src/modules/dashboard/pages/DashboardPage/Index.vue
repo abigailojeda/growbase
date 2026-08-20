@@ -6,8 +6,10 @@
     <div class="grid grid-cols-1 gap-8 xl:grid-cols-2">
       <CropsNeedingAttention :crops="cropsNeedingAttentionList" />
 
-      <div>
-        <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <div
+        class="grid grid-cols-1 items-start gap-4 xl:grid-cols-[minmax(220px,0.7fr)_minmax(320px,1.3fr)]"
+      >
+        <div class="flex flex-col gap-4">
           <SummaryCard label="Total crops" :value="totalCrops" />
 
           <SummaryCard label="Active crops" :value="activeCrops" variant="primary" />
@@ -19,9 +21,7 @@
           />
         </div>
 
-        <div class="mt-8">
-          <CropHealthOverview :counts="healthCounts" />
-        </div>
+        <CropHealthOverview :counts="healthCounts" />
       </div>
     </div>
 

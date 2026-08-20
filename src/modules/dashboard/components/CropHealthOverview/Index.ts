@@ -1,4 +1,9 @@
-import { defineComponent, type PropType } from 'vue'
+import type { ChartData, ChartOptions } from 'chart.js'
+import { computed, defineComponent, ref, type PropType } from 'vue'
+
+import Chart from '@/components/Chart/Index.vue'
+import BarIcon from '@/components/icons/BarIcon.vue'
+import GridIcon from '@/components/icons/GridIcon.vue'
 
 export interface CropHealthCounts {
   good: number
@@ -7,13 +12,70 @@ export interface CropHealthCounts {
   noData: number
 }
 
+type CropHealthView = 'summary' | 'chart'
+
 export default defineComponent({
   name: 'CropHealthOverview',
+
+  components: {
+    BarIcon,
+    Chart,
+    GridIcon,
+  },
 
   props: {
     counts: {
       type: Object as PropType<CropHealthCounts>,
       required: true,
     },
+  },
+
+  setup(props) {
+    const activeView = ref<CropHealthView>('summary')
+
+    const chartData = computed<ChartData<'doughnut'>>(() => ({
+      labels: ['Good', 'Warning', 'Critical', 'No data'],
+      datasets: [
+        {
+          data: [
+            props.counts.good,
+            props.counts.warning,
+            props.counts.critical,
+            props.counts.noData,
+          ],
+          backgroundColor: [
+            'rgba(34, 197, 94, 0.75)',
+            'rgba(245, 158, 11, 0.75)',
+            'rgba(239, 68, 68, 0.75)',
+            'rgba(107, 114, 128, 0.5)',
+          ],
+          borderWidth: 0,
+          hoverOffset: 4,
+        },
+      ],
+    }))
+
+    const chartOptions: ChartOptions<'doughnut'> = {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '65%',
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            usePointStyle: true,
+            pointStyle: 'circle',
+            boxWidth: 8,
+            boxHeight: 8,
+          },
+        },
+      },
+    }
+
+    return {
+      activeView,
+      chartData,
+      chartOptions,
+    }
   },
 })
