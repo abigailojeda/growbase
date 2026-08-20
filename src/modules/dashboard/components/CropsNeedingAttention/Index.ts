@@ -1,7 +1,6 @@
 import { defineComponent, type PropType } from 'vue'
-
-import type { CropNeedingAttention } from '@/composables/useDashboardSummary/useDashboardSummary'
 import type { CropImage } from '@/modules/crops/types'
+import type { CropNeedingAttention } from '@/modules/dashboard/types'
 import plantImage from '@/assets/images/business-lines/sapling.svg'
 
 export default defineComponent({

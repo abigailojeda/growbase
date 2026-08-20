@@ -2,12 +2,7 @@ import { computed, toValue, type MaybeRefOrGetter } from 'vue'
 
 import type { Crop, CropReport } from '@/modules/crops/types'
 import { calculateCropHealth } from '@/utils/cropHealth/cropHealth'
-
-export interface CropNeedingAttention {
-  crop: Crop
-  health: 'warning' | 'critical'
-  note: string
-}
+import type { CropNeedingAttention } from '@/modules/dashboard/types'
 
 export const useDashboardSummary = (
   crops: MaybeRefOrGetter<Crop[]>,

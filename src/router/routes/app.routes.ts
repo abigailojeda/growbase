@@ -22,6 +22,11 @@ export const appRoutes: RouteRecordRaw[] = [
         name: 'crop-detail',
         component: () => import('@/modules/crops/pages/CropDetailPage/Index.vue'),
       },
+      {
+        path: 'tasks',
+        name: 'tasks',
+        component: () => import('@/modules/tasks/pages/TasksPage/Index.vue'),
+      },
     ],
   },
 ]
