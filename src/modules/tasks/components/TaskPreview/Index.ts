@@ -2,6 +2,7 @@ import { computed, defineComponent, type PropType } from 'vue'
 
 import type { Task } from '@/modules/tasks/types'
 import UserIcon from '@/components/icons/UserIcon.vue'
+import { formatDate } from '@/utils/date/date'
 
 export default defineComponent({
   name: 'TaskPreview',
@@ -21,13 +22,7 @@ export default defineComponent({
   },
 
   setup(props) {
-    const formattedDueDate = computed(() =>
-      new Intl.DateTimeFormat('en-GB', {
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric',
-      }).format(new Date(props.task.dueDate)),
-    )
+    const formattedDueDate = computed(() => formatDate(props.task.dueDate))
 
     const headerClass = computed(() => {
       switch (props.task.status) {
