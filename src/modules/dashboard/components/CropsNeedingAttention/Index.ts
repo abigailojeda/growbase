@@ -1,10 +1,15 @@
 import { defineComponent, type PropType } from 'vue'
 import type { CropImage } from '@/modules/crops/types'
 import type { CropNeedingAttention } from '@/modules/dashboard/types'
-import plantImage from '@/assets/images/business-lines/sapling.svg'
+import CropIcon from '@/components/icons/CropIcon.vue'
+import CropHealthHeader from '@/modules/crops/components/CropHealthHeader/Index.vue'
 
 export default defineComponent({
   name: 'CropsNeedingAttention',
+  components: {
+    CropIcon,
+    CropHealthHeader,
+  },
 
   props: {
     crops: {
@@ -24,7 +29,6 @@ export default defineComponent({
 
     return {
       getCoverImage,
-      plantImage,
     }
   },
 })

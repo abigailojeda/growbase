@@ -3,6 +3,7 @@ import { defineComponent, type PropType } from 'vue'
 import CloseIcon from '@/components/icons/CloseIcon.vue'
 import MenuIcon from '@/components/icons/MenuIcon.vue'
 import Logo from '@/components/Logo/Index.vue'
+import Menu from '@/components/Menu/Index.vue'
 import type { BusinessLine } from '@/modules/businessLines/types'
 
 export default defineComponent({
@@ -12,6 +13,7 @@ export default defineComponent({
     CloseIcon,
     Logo,
     MenuIcon,
+    Menu,
   },
 
   props: {

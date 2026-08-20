@@ -19,4 +19,10 @@ export const cropReportService = {
         .map((report) => [report.cropId, report]),
     )
   },
+
+  async getByCrop(cropId: string) {
+    return cropReports
+      .filter((report) => report.cropId === cropId)
+      .sort((a, b) => new Date(b.reportedAt).getTime() - new Date(a.reportedAt).getTime())
+  },
 }

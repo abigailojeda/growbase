@@ -8,10 +8,7 @@
     <div v-for="image in orderedImages" :key="image.id" class="relative shrink-0">
       <button
         type="button"
-        class="block cursor-pointer overflow-hidden rounded-lg border border-text/10"
-        :class="{
-          'border-primary ring-2 ring-primary/20': image.id === effectiveFeaturedImageId,
-        }"
+        class="block cursor-pointer overflow-hidden hover:opacity-90 transition-opacity rounded-lg border border-text/10"
         @click="openImage(image)"
       >
         <img
