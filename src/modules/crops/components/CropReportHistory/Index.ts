@@ -5,6 +5,8 @@ import type { Crop, CropReport } from '@/modules/crops/types'
 import type { User } from '@/modules/auth/types'
 import { ref } from 'vue'
 
+import { useI18n } from 'vue-i18n'
+
 export default defineComponent({
   name: 'CropReportHistory',
 
@@ -30,6 +32,8 @@ export default defineComponent({
   setup(props) {
     const expandedReportId = ref<string | null>(null)
 
+    const { t } = useI18n()
+
     const toggleReport = (reportId: string) => {
       expandedReportId.value = expandedReportId.value === reportId ? null : reportId
     }
@@ -41,6 +45,7 @@ export default defineComponent({
       expandedReportId,
       toggleReport,
       getReporterName,
+      t,
     }
   },
 })

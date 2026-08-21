@@ -9,7 +9,7 @@
       :class="`crop-measurement-${measurement.health}`"
     >
       <span class="text-sm text-text/60">
-        {{ measurement.label }}
+        {{ t(`report.measurements.${measurement.label}`) }}
       </span>
 
       <p class="mt-1 text-xl font-semibold" :class="`crop-measurement-value-${measurement.health}`">
@@ -17,8 +17,9 @@
       </p>
 
       <span class="text-xs text-text/50">
-        Optimal:
-        {{ measurement.optimalRange.min }}–{{ measurement.optimalRange.max }}{{ measurement.unit }}
+        {{ t('report.measurements.Optimal') }}: {{ measurement.optimalRange.min }}–{{
+          measurement.optimalRange.max
+        }}{{ measurement.unit }}
       </span>
     </div>
   </div>

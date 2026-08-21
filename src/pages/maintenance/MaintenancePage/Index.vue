@@ -13,7 +13,7 @@
         {{ title }}
       </h1>
 
-      <p class="mx-auto mt-3 max-w-md text-text/60">
+      <p class="mt-3 max-w-md text-text/60">
         {{ description }}
       </p>
 

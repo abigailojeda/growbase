@@ -51,7 +51,7 @@
               {{ report.notes }}
             </p>
 
-            <p v-else class="mt-3 text-sm text-text/40">No notes provided.</p>
+            <p v-else class="mt-3 text-sm text-text/40">{{ t('report.noNotes') }}</p>
           </div>
 
           <DownArrowIcon

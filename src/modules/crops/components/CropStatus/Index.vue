@@ -10,7 +10,7 @@
     <GearIcon :class="['w-5', status === 'active' && 'animate-spin [animation-duration:5s]']" />
 
     <span>
-      {{ status }}
+      {{ t(`general.${status}`) }}
     </span>
   </div>
 </template>

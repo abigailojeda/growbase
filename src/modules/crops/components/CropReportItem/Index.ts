@@ -1,5 +1,7 @@
 import { computed, defineComponent, type PropType } from 'vue'
 
+import { useI18n } from 'vue-i18n'
+
 import DownArrowIcon from '@/components/icons/DownArrowIcon.vue'
 import CropHealthHeader from '@/modules/crops/components/CropHealthHeader/Index.vue'
 import CropMeasurements from '@/modules/crops/components/CropMeasurements/Index.vue'
@@ -47,6 +49,8 @@ export default defineComponent({
       calculateCropHealth(props.report.measurements, props.crop.optimalConditions),
     )
 
+    const { t } = useI18n()
+
     const formattedDate = computed(() => formatDate(props.report.reportedAt))
 
     const formattedTime = computed(() => formatTime(props.report.reportedAt))
@@ -70,6 +74,7 @@ export default defineComponent({
       formattedDate,
       formattedTime,
       measurements,
+      t,
     }
   },
 })

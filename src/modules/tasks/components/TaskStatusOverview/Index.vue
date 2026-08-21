@@ -2,13 +2,13 @@
 
 <template>
   <section class="rounded-xl bg-surface p-5">
-    <div class="flex flex-wrap items-center justify-between gap-4">
-      <div class="flex flex-wrap items-center gap-4">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4">
         <h2 class="text-2xl font-semibold text-text">
           {{ title }}
         </h2>
 
-        <div class="flex rounded-lg bg-background p-1">
+        <div class="flex rounded-lg w-fit bg-background p-1">
           <button
             type="button"
             :class="[
@@ -41,7 +41,9 @@
         </div>
       </div>
 
-      <RouterLink to="/app/tasks" class="font-medium text-primary"> Go to tasks </RouterLink>
+      <RouterLink to="/app/tasks" class="font-medium text-primary hover:opacity-80">
+        {{ t('tasks.goToTasks') }}
+      </RouterLink>
     </div>
 
     <div v-if="activeView === 'tasks'" class="mt-6 grid gap-6 lg:grid-cols-3">
@@ -71,13 +73,15 @@
           />
         </div>
 
-        <p v-else class="rounded-xl bg-background p-4 text-sm text-text/50">No tasks.</p>
+        <p v-else class="rounded-xl bg-background p-4 text-sm text-text/50">
+          {{ t('tasks.empty') }}
+        </p>
       </div>
     </div>
 
     <div v-if="activeView === 'summary'" class="mt-6 grid grid-cols-2 gap-4 xl:grid-cols-4">
       <div class="rounded-xl bg-background p-4">
-        <p class="text-sm text-text/60">Total</p>
+        <p class="text-sm text-text/60">{{ t('tasks.states.total') }}</p>
 
         <p class="mt-2 text-2xl font-semibold text-text">
           {{ summary.total }}
@@ -85,7 +89,7 @@
       </div>
 
       <div class="rounded-xl bg-background p-4">
-        <p class="text-sm text-text/60">Pending</p>
+        <p class="text-sm text-text/60">{{ t('tasks.states.pending') }}</p>
 
         <p class="mt-2 text-2xl font-semibold text-amber-700 dark:text-amber-400">
           {{ summary.pending }}
@@ -93,7 +97,7 @@
       </div>
 
       <div class="rounded-xl bg-background p-4">
-        <p class="text-sm text-text/60">In progress</p>
+        <p class="text-sm text-text/60">{{ t('tasks.states.inProgress') }}</p>
 
         <p class="mt-2 text-2xl font-semibold text-blue-700 dark:text-blue-400">
           {{ summary.inProgress }}
@@ -101,7 +105,7 @@
       </div>
 
       <div class="rounded-xl bg-background p-4">
-        <p class="text-sm text-text/60">Completed</p>
+        <p class="text-sm text-text/60">{{ t('tasks.states.completed') }}</p>
 
         <p class="mt-2 text-2xl font-semibold text-green-700 dark:text-green-400">
           {{ summary.completed }}

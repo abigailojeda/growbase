@@ -35,9 +35,17 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    featuredLabel: {
-      type: String,
-      default: 'featured image',
+    featuredTexts: {
+      type: Object as PropType<{
+        current: string
+        setAs: string
+        title: string
+        message: string
+        confirm: string
+        cancel: string
+        noImages: string
+      }>,
+      required: true,
     },
     onSetFeatured: {
       type: Function as PropType<(imageId: string) => void | Promise<void>>,

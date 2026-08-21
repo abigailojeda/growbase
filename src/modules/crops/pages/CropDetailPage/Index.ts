@@ -1,6 +1,8 @@
 import { computed, defineComponent, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
+import { useI18n } from 'vue-i18n'
+
 import ArrowIcon from '@/components/icons/ArrowIcon.vue'
 import ImageGallery from '@/components/ImageGallery/Index.vue'
 import CropMeasurements from '@/modules/crops/components/CropMeasurements/Index.vue'
@@ -32,6 +34,8 @@ export default defineComponent({
   setup() {
     const route = useRoute()
     const authStore = useAuthStore()
+
+    const { t } = useI18n()
 
     const crop = ref<Crop>()
     const reports = ref<CropReport[]>([])
@@ -105,6 +109,7 @@ export default defineComponent({
       measurements,
       isAdmin,
       setCoverImage,
+      t,
     }
   },
 })

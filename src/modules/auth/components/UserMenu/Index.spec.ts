@@ -54,7 +54,7 @@ describe('UserMenu', () => {
     const menu = wrapper.get('[role="menu"]')
 
     expect(menu.text()).toContain('Vineyard Admin')
-    expect(menu.text()).toContain('admin')
+    expect(menu.text()).toContain('Admin')
     expect(menu.text()).toContain('Logout')
   })
 

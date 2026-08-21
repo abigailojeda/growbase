@@ -27,7 +27,9 @@
               {{ crop.name }}
             </h2>
 
-            <p class="mt-1 text-sm text-text/60">{{ crop.type }} · {{ crop.location }}</p>
+            <p class="mt-1 text-sm text-text/60">
+              {{ t(`crops.types.${crop.type}`) }} · {{ crop.location }}
+            </p>
           </div>
 
           <CropStatus :status="crop.status" />

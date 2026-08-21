@@ -1,6 +1,16 @@
 {
   "general": {
-    "changeLanguage": "Change language"
+    "changeLanguage": "Change language",
+    "comingSoon": "Coming soon",
+    "goBack": "Go back",
+    "goSummary": "Back to summary",
+    "noImageAvailable": "No image available",
+    "noNotesProvided": "No notes provided.",
+    "active": "Active",
+    "inactive": "Inactive",
+    "cancel": "Cancel",
+    "logout": "Logout",
+    "login": "Login"
   },
   "landing": {
     "hero": {
@@ -11,6 +21,172 @@
       "cta": "Explore Growbase",
       "dashboardAlt": "Growbase dashboard overview",
       "cropDetailAlt": "Growbase crop detail and report history"
+    },
+    "benefits": {
+      "saveTime": {
+        "title": "Save time",
+        "description": "Simplify daily operations and reduce manual work."
+      },
+      "productivity": {
+        "title": "Increase productivity",
+        "description": "Use real-time insights to make better decisions, faster."
+      },
+      "team": {
+        "title": "Empower your team",
+        "description": "Assign tasks, track progress and keep everyone aligned."
+      },
+      "organization": {
+        "title": "Stay organized",
+        "description": "Keep crops, tasks and reports together in one place."
+      }
+    },
+    "businessLines": {
+      "title": "Built for every kind of grower",
+      "iconAlt": "{name} icon",
+      "vineyard": {
+        "name": "Vineyard",
+        "description": "Manage rows, monitor vines and maintain quality from bud to harvest."
+      },
+      "greenhouse": {
+        "name": "Greenhouse",
+        "description": "Control growing conditions and optimize year-round production."
+      },
+      "openFields": {
+        "name": "Open Fields",
+        "description": "Oversee large areas, plan operations and maximize field performance."
+      }
+    },
+    "features": {
+      "title": "Everything you need to grow with confidence",
+      "cropMonitoring": {
+        "title": "Crop monitoring",
+        "description": "Track temperature, humidity, soil moisture, pH and more in real time."
+      },
+      "taskCoordination": {
+        "title": "Task coordination",
+        "description": "Create tasks, assign them to your team and monitor progress effortlessly."
+      },
+      "reportHistory": {
+        "title": "Report history",
+        "description": "Keep a complete history of measurements, observations and field reports."
+      },
+      "healthInsights": {
+        "title": "Health insights",
+        "description": "Identify crop health issues quickly and focus attention where it matters."
+      }
+    },
+    "footer": {
+      "homeAriaLabel": "Go to Growbase home",
+      "description": "Smarter crop management for connected agricultural operations.",
+      "cta": "Explore Growbase",
+      "copyright": "© {year} Growbase. All rights reserved."
     }
+  },
+  "auth": {
+    "demoAccounts": {
+      "title": "Demo accounts",
+      "description": "Explore Growbase with different business lines",
+      "disclaimer": "These demo accounts are for exploration only. No real data will be changed.",
+      "adminLogin": "Login as Admin",
+      "workerLogin": "Login as Worker"
+    }
+  },
+  "navigation": {
+    "overview": "Overview",
+    "crops": "Crops",
+    "tasks": "Tasks",
+    "reports": "Reports"
+  },
+  "tasks": {
+    "name": "tasks",
+    "maintenance": {
+      "title": "Task management is in development",
+      "description": "Soon you'll be able to organize, assign and track work across your team from one place."
+    },
+    "states": {
+      "pending": "Pending",
+      "inProgress": "In progress",
+      "completed": "Completed",
+      "total": "Total"
+    },
+    "teamOverview": "Team overview",
+    "tasksOverview": "Tasks overview",
+    "cardsView": "Cards view",
+    "chartView": "Chart view",
+    "noWorkers": "No workers available.",
+    "taskCount": "{count} task | {count} tasks",
+    "statusByWorker": "Task status by worker",
+    "goToTasks": "Go to tasks",
+    "myTasks": "My tasks",
+    "empty": "No tasks.",
+    "due": "Due date:"
+  },
+  "reports": {
+    "maintenance": {
+      "title": "Reports are in development",
+      "description": "Soon you'll be able to create new crop reports and review previous reports from one place."
+    }
+  },
+  "dashboard": {
+    "needsAttention": {
+      "title": "Needs attention",
+      "viewAllCrops": "View all crops",
+      "allHealthy": "All crops are within their optimal conditions."
+    }
+  },
+  "health": {
+    "title": "Crops health",
+    "good": "Good",
+    "warning": "Warning",
+    "critical": "Critical",
+    "noData": "No health data",
+    "summaryView": "Health summary view",
+    "chartView": "Health chart view",
+    "chartAriaLabel": "Crop health distribution"
+  },
+  "summary": {
+    "totalCrops": "Total crops",
+    "activeCrops": "Active crops",
+    "needsAttention": "Needs attention"
+  },
+  "crops": {
+    "title": "Crops",
+    "noCrops": "No crops available.",
+    "coverImage": "Cover image",
+    "currentMeasurements": "Current measurements",
+    "noMeasurements": "No measurements have been reported yet.",
+    "latestNotes": "Latest notes",
+    "types": {
+      "Strawberries": "Strawberries",
+      "Potatoes": "Potatoes",
+      "Corn": "Corn",
+      "Grapes": "Grapes",
+      "Tomatoes": "Tomatoes"
+    }
+  },
+  "history": {
+    "title": "Reports history",
+    "noReports": "No reports available."
+  },
+  "report": {
+    "noNotes": "No notes provided.",
+    "measurements": {
+      "Temperature": "Temperature",
+      "Humidity": "Humidity",
+      "Soil moisture": "Soil moisture",
+      "pH": "pH",
+      "Optimal": "Optimal"
+    }
+  },
+  "images": {
+    "currentCover": "Current cover image",
+    "setAsCover": "Set as cover image",
+    "setCover": "Set cover image",
+    "confirmSetCover": "Are you sure you want to set this image as the cover image?",
+    "noImages": "No images available"
+  },
+  "roles": {
+    "admin": "Admin",
+    "worker": "Worker"
   }
 }

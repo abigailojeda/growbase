@@ -2,11 +2,17 @@
 
 <template>
   <section class="rounded-xl bg-surface p-5">
-    <div class="flex items-center justify-between gap-4">
-      <h2 class="text-2xl font-semibold text-text">Needs attention</h2>
+    <div class="flex flex-col sm:flex-row md:items-center justify-between gap-4">
+      <h2 class="text-2xl font-semibold text-text">
+        {{ t('dashboard.needsAttention.title') }}
+      </h2>
 
-      <RouterLink v-if="crops.length" to="/app/crops" class="font-medium text-primary">
-        View all crops
+      <RouterLink
+        v-if="crops.length"
+        to="/app/crops"
+        class="font-medium text-primary hover:opacity-80"
+      >
+        {{ t('dashboard.needsAttention.viewAllCrops') }}
       </RouterLink>
     </div>
 
@@ -14,10 +20,12 @@
       <div class="flex flex-col items-center justify-center gap-3 p-6">
         <CropIcon class="h-20 w-20 text-primary" />
 
-        <p class="mt-6 text-sm text-text/60">All crops are within their optimal conditions.</p>
+        <p class="mt-6 text-sm text-text/60">
+          {{ t('dashboard.needsAttention.allHealthy') }}
+        </p>
 
         <RouterLink to="/app/crops" class="font-medium text-primary hover:text-primary/80">
-          View all crops
+          {{ t('dashboard.needsAttention.viewAllCrops') }}
         </RouterLink>
       </div>
     </section>
@@ -40,7 +48,7 @@
           />
 
           <div v-else class="flex size-full items-center justify-center text-xs text-text/50">
-            No image available
+            {{ t('general.noImageAvailable') }}
           </div>
         </div>
 
@@ -53,7 +61,9 @@
             {{ item.note }}
           </p>
 
-          <p v-else class="mt-2 text-sm text-text/40">No notes provided.</p>
+          <p v-else class="mt-2 text-sm text-text/40">
+            {{ t('general.noNotesProvided') }}
+          </p>
         </div>
       </RouterLink>
     </div>

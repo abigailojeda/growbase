@@ -26,7 +26,7 @@
           </p>
 
           <p class="mt-1 text-sm capitalize opacity-60">
-            {{ currentUser.role }}
+            {{ t(`roles.${currentUser.role}`) }}
           </p>
         </div>
 
@@ -38,7 +38,7 @@
             @click="handleLogout"
           >
             <LogoutIcon class="size-5 text-primary" />
-            <span>Logout</span>
+            <span>{{ t('general.logout') }}</span>
           </button>
         </div>
       </template>
@@ -51,7 +51,7 @@
         @click="handleLogin"
       >
         <LogoutIcon class="size-5 text-primary" />
-        <span>Login</span>
+        <span>{{ t('general.login') }}</span>
       </button>
     </div>
   </div>

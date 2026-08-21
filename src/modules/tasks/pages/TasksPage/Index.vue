@@ -2,7 +2,7 @@
 
 <template>
   <Maintenance
-    title="Task management is in development"
-    description="Soon you'll be able to organize, assign and track work across your team from one place."
+    :title="t('tasks.maintenance.title')"
+    :description="t('tasks.maintenance.description')"
   />
 </template>

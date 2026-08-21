@@ -32,9 +32,7 @@
             : 'bg-surface/90 text-text hover:bg-surface'
         "
         :aria-label="
-          image.id === effectiveFeaturedImageId
-            ? `Current ${featuredLabel}`
-            : `Set as ${featuredLabel}`
+          image.id === effectiveFeaturedImageId ? featuredTexts.current : featuredTexts.setAs
         "
         @click.stop="requestSetFeatured(image.id)"
       >
@@ -47,7 +45,7 @@
     v-else
     class="flex min-h-48 items-center justify-center border-b border-text/10 py-8 text-text/50"
   >
-    No images available
+    {{ featuredTexts.noImages }}
   </div>
 
   <ImageModal
@@ -60,9 +58,10 @@
 
   <ConfirmModal
     :open="isConfirmModalOpen"
-    :title="`Set ${featuredLabel}`"
-    :message="`Are you sure you want to set this image as the ${featuredLabel}?`"
-    :confirm-label="`Set as ${featuredLabel}`"
+    :title="featuredTexts.title"
+    :message="featuredTexts.message"
+    :confirm-label="featuredTexts.confirm"
+    :cancel-label="featuredTexts.cancel"
     @confirm="confirmSetFeatured"
     @cancel="cancelSetFeatured"
   />

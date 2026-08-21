@@ -1,7 +1,7 @@
 <script lang="ts" src="./Index.ts"></script>
 
 <template>
-  <article class="min-w-0 overflow-hidden rounded-lg bg-background">
+  <section class="min-w-0 overflow-hidden rounded-lg bg-background">
     <div
       :class="[
         'flex flex-col gap-1 px-3 py-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4',
@@ -12,7 +12,9 @@
         {{ task.title }}
       </h4>
 
-      <span class="shrink-0 text-xs font-medium"> Due {{ formattedDueDate }} </span>
+      <span class="shrink-0 text-xs font-medium">
+        {{ t('tasks.due') }} {{ formattedDueDate }}
+      </span>
     </div>
 
     <div class="px-3 py-2">
@@ -31,5 +33,5 @@
         </span>
       </div>
     </div>
-  </article>
+  </section>
 </template>

@@ -1,5 +1,6 @@
 import type { ChartData, ChartOptions } from 'chart.js'
 import { computed, defineComponent, ref, type PropType } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import Chart from '@/components/Chart/Index.vue'
 import BarIcon from '@/components/icons/BarIcon.vue'
@@ -31,10 +32,12 @@ export default defineComponent({
   },
 
   setup(props) {
+    const { t } = useI18n()
+
     const activeView = ref<CropHealthView>('summary')
 
     const chartData = computed<ChartData<'doughnut'>>(() => ({
-      labels: ['Good', 'Warning', 'Critical', 'No health data'],
+      labels: [t('health.good'), t('health.warning'), t('health.critical'), t('health.noData')],
       datasets: [
         {
           data: [
@@ -73,6 +76,7 @@ export default defineComponent({
     }
 
     return {
+      t,
       activeView,
       chartData,
       chartOptions,

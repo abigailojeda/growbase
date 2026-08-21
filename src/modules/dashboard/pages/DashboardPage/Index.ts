@@ -17,6 +17,8 @@ import TeamOverview from '@/modules/tasks/components/TeamOverview/Index.vue'
 import type { TeamWorkerTaskSummary } from '@/modules/tasks/types'
 import { useTaskStore } from '@/modules/tasks/stores/task.store'
 
+import { useI18n } from 'vue-i18n'
+
 export default defineComponent({
   name: 'DashboardPage',
 
@@ -38,6 +40,8 @@ export default defineComponent({
 
     const { loadCrops, latestReports } = useCrops()
     const { loadTasks } = useTasks()
+
+    const { t } = useI18n()
 
     const {
       totalCrops,
@@ -98,6 +102,7 @@ export default defineComponent({
       teamSummaries,
       isAdmin,
       workers,
+      t,
     }
   },
 })

@@ -6,10 +6,11 @@ import {
   type TooltipPositionerFunction,
 } from 'chart.js'
 import { computed, defineComponent, ref, type PropType } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import BarIcon from '@/components/icons/BarIcon.vue'
-import GridIcon from '@/components/icons/GridIcon.vue'
 import Chart from '@/components/Chart/Index.vue'
+import GridIcon from '@/components/icons/GridIcon.vue'
 import type { TeamWorkerTaskSummary } from '@/modules/tasks/types'
 
 type TeamOverviewView = 'cards' | 'chart'
@@ -42,27 +43,29 @@ export default defineComponent({
   },
 
   setup(props) {
+    const { t } = useI18n()
+
     const activeView = ref<TeamOverviewView>('cards')
 
     const chartData = computed<ChartData<'bar'>>(() => ({
       labels: props.workers.map((worker) => worker.name),
       datasets: [
         {
-          label: 'Pending',
+          label: t('tasks.states.pending'),
           data: props.workers.map((worker) => worker.pending),
           backgroundColor: 'rgba(245, 158, 11, 0.75)',
           maxBarThickness: 18,
           borderSkipped: false,
         },
         {
-          label: 'In progress',
+          label: t('tasks.states.inProgress'),
           data: props.workers.map((worker) => worker.inProgress),
           backgroundColor: 'rgba(59, 130, 246, 0.75)',
           maxBarThickness: 18,
           borderSkipped: false,
         },
         {
-          label: 'Completed',
+          label: t('tasks.states.completed'),
           data: props.workers.map((worker) => worker.completed),
           backgroundColor: 'rgba(34, 197, 94, 0.75)',
           maxBarThickness: 18,
@@ -120,6 +123,7 @@ export default defineComponent({
     }
 
     return {
+      t,
       activeView,
       chartData,
       chartOptions,
