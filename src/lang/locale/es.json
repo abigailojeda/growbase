@@ -162,7 +162,9 @@
       "Corn": "Maíz",
       "Grapes": "Uvas",
       "Tomatoes": "Tomates"
-    }
+    },
+    "emptyCrop": "Este cultivo no existe o no tiene datos registrados, prueba con otro.",
+    "backToCrops": "Volver a cultivos"
   },
   "history": {
     "title": "Historial de reportes",

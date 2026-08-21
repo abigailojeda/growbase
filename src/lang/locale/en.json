@@ -162,7 +162,9 @@
       "Corn": "Corn",
       "Grapes": "Grapes",
       "Tomatoes": "Tomatoes"
-    }
+    },
+    "emptyCrop": "This crop does not exist or has no recorded data. Please try another one.",
+    "backToCrops": "Back to crops"
   },
   "history": {
     "title": "Reports history",
