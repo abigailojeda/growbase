@@ -5,7 +5,7 @@
     <div class="flex max-w-xl flex-col items-center text-center">
       <PlantIcon class="size-20 text-primary" />
 
-      <h1 class="mt-6 text-3xl font-semibold text-text">Coming soon</h1>
+      <h1 class="mt-6 text-3xl font-semibold text-text">{{ t('general.comingSoon') }}</h1>
 
       <h2 class="mt-3 text-xl font-medium text-text">
         {{ title }}
@@ -15,7 +15,9 @@
         {{ description }}
       </p>
 
-      <button type="button" class="btn-outline mt-8" @click="goBack">Go back</button>
+      <button type="button" class="btn-outline mt-8" @click="goBack">
+        {{ t('general.goBack') }}
+      </button>
     </div>
   </section>
 </template>

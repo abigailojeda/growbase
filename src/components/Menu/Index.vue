@@ -29,7 +29,7 @@
         <component :is="item.icon" class="size-5 shrink-0" />
 
         <span :class="collapsed && 'md:hidden'">
-          {{ item.label }}
+          {{ t(item.label) }}
         </span>
       </a>
     </RouterLink>

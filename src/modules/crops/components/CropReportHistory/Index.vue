@@ -2,10 +2,10 @@
 
 <template>
   <section class="rounded-xl bg-surface p-6">
-    <h2 class="text-2xl font-semibold text-text">Report history</h2>
+    <h2 class="text-2xl font-semibold text-text">{{ t('history.title') }}</h2>
 
     <p v-if="!reports.length" class="mt-6 text-sm text-text/60">
-      No reports have been submitted for this crop yet.
+      {{ t('history.noReports') }}
     </p>
 
     <div v-else class="relative mt-6">

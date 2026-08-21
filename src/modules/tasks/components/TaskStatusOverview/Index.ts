@@ -1,5 +1,7 @@
 import { computed, defineComponent, ref, type PropType } from 'vue'
 
+import { useI18n } from 'vue-i18n'
+
 import TaskPreview from '@/modules/tasks/components/TaskPreview/Index.vue'
 import type { User } from '@/modules/auth/types'
 import type { Task, TaskStatus, TaskStatusSummary } from '@/modules/tasks/types'
@@ -43,22 +45,23 @@ export default defineComponent({
   },
 
   setup(props) {
+    const { t } = useI18n()
     const activeView = ref<TaskOverviewView>('tasks')
 
     const taskGroups = computed<TaskGroup[]>(() => [
       {
         status: 'pending',
-        label: 'Pending',
+        label: t('tasks.states.pending'),
         tasks: props.tasks.filter((task) => task.status === 'pending'),
       },
       {
         status: 'in-progress',
-        label: 'In progress',
+        label: t('tasks.states.inProgress'),
         tasks: props.tasks.filter((task) => task.status === 'in-progress'),
       },
       {
         status: 'completed',
-        label: 'Completed',
+        label: t('tasks.states.completed'),
         tasks: props.tasks.filter((task) => task.status === 'completed'),
       },
     ])
@@ -70,6 +73,7 @@ export default defineComponent({
       activeView,
       taskGroups,
       getAssigneeName,
+      t,
     }
   },
 })

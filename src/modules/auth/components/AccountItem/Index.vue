@@ -22,11 +22,11 @@
 
     <div class="flex shrink-0 flex-col gap-2">
       <button type="button" class="btn-outline" @click="$emit('login', 'admin')">
-        Login as Admin
+        {{ t('auth.demoAccounts.adminLogin') }}
       </button>
 
       <button type="button" class="btn-outline-secondary" @click="$emit('login', 'worker')">
-        Login as Worker
+        {{ t('auth.demoAccounts.workerLogin') }}
       </button>
     </div>
   </div>

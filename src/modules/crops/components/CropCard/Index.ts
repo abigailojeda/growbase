@@ -1,5 +1,7 @@
 import { computed, defineComponent, toRef, type PropType } from 'vue'
 
+import { useI18n } from 'vue-i18n'
+
 import { useCropHealth } from '@/composables/useCropHealth/useCropHealth'
 import type { Crop, CropReport } from '@/modules/crops/types'
 import CropHealthHeader from '@/modules/crops/components/CropHealthHeader/Index.vue'
@@ -26,6 +28,8 @@ export default defineComponent({
   setup(props) {
     const { health } = useCropHealth(toRef(props, 'crop'), toRef(props, 'report'))
 
+    const { t } = useI18n()
+
     const coverImage = computed(
       () =>
         props.crop.images.find((image) => image.id === props.crop.coverImageId) ??
@@ -35,6 +39,7 @@ export default defineComponent({
     return {
       coverImage,
       health,
+      t,
     }
   },
 })

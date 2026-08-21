@@ -1,5 +1,7 @@
 import { computed, defineComponent, type PropType } from 'vue'
 
+import { useI18n } from 'vue-i18n'
+
 import HealthIcon from '@/components/icons/HealthIcon.vue'
 
 type CropHealth = 'good' | 'warning' | 'critical'
@@ -23,17 +25,20 @@ export default defineComponent({
   },
 
   setup(props) {
+    const { t } = useI18n()
+
     const healthKey = computed(() => props.health ?? 'no-data')
 
     const healthLabel = computed(() => {
-      if (!props.health) return 'No health data'
+      if (!props.health) return t('health.noData')
 
-      return props.health
+      return t(`health.${props.health}`)
     })
 
     return {
       healthKey,
       healthLabel,
+      t,
     }
   },
 })

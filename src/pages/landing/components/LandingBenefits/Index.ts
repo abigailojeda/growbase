@@ -1,29 +1,30 @@
 import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-import HealthIcon from '@/components/icons/HealthIcon.vue'
-import ReportIcon from '@/components/icons/ReportIcon.vue'
-import PlantIcon from '@/components/icons/PlantIcon.vue'
 import AccountsIcon from '@/components/icons/AccountsIcons.vue'
+import HealthIcon from '@/components/icons/HealthIcon.vue'
+import PlantIcon from '@/components/icons/PlantIcon.vue'
+import ReportIcon from '@/components/icons/ReportIcon.vue'
 
 const benefits = [
   {
-    title: 'Save time',
-    description: 'Simplify daily operations and reduce manual work.',
+    title: 'landing.benefits.saveTime.title',
+    description: 'landing.benefits.saveTime.description',
     icon: ReportIcon,
   },
   {
-    title: 'Increase productivity',
-    description: 'Use real-time insights to make better decisions, faster.',
+    title: 'landing.benefits.productivity.title',
+    description: 'landing.benefits.productivity.description',
     icon: PlantIcon,
   },
   {
-    title: 'Empower your team',
-    description: 'Assign tasks, track progress and keep everyone aligned.',
+    title: 'landing.benefits.team.title',
+    description: 'landing.benefits.team.description',
     icon: AccountsIcon,
   },
   {
-    title: 'Stay organized',
-    description: 'Keep crops, tasks and reports together in one place.',
+    title: 'landing.benefits.organization.title',
+    description: 'landing.benefits.organization.description',
     icon: HealthIcon,
   },
 ]
@@ -32,8 +33,11 @@ export default defineComponent({
   name: 'LandingBenefits',
 
   setup() {
+    const { t } = useI18n()
+
     return {
       benefits,
+      t,
     }
   },
 })

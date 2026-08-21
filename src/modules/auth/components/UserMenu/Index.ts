@@ -2,6 +2,8 @@ import { storeToRefs } from 'pinia'
 import { defineComponent, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
+import { useI18n } from 'vue-i18n'
+
 import LogoutIcon from '@/components/icons/LogoutIcon.vue'
 import UserIcon from '@/components/icons/UserIcon.vue'
 import { useAuthStore } from '@/modules/auth/stores/auth.store'
@@ -18,6 +20,8 @@ export default defineComponent({
     const router = useRouter()
     const authStore = useAuthStore()
     const { currentUser } = storeToRefs(authStore)
+
+    const { t } = useI18n()
 
     const isOpen = ref(false)
     const menuRef = ref<HTMLElement | null>(null)
@@ -70,6 +74,7 @@ export default defineComponent({
       toggleMenu,
       handleLogin,
       handleLogout,
+      t,
     }
   },
 })

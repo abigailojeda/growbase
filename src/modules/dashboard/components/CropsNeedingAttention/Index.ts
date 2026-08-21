@@ -4,6 +4,8 @@ import type { CropNeedingAttention } from '@/modules/dashboard/types'
 import CropIcon from '@/components/icons/CropIcon.vue'
 import CropHealthHeader from '@/modules/crops/components/CropHealthHeader/Index.vue'
 
+import { useI18n } from 'vue-i18n'
+
 export default defineComponent({
   name: 'CropsNeedingAttention',
   components: {
@@ -19,6 +21,7 @@ export default defineComponent({
   },
 
   setup() {
+    const { t } = useI18n()
     const getCoverImage = (item: CropNeedingAttention): CropImage | undefined => {
       const { crop } = item
 
@@ -29,6 +32,7 @@ export default defineComponent({
 
     return {
       getCoverImage,
+      t,
     }
   },
 })

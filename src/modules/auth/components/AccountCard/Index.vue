@@ -10,9 +10,13 @@
       </div>
 
       <div>
-        <h1 class="text-xl font-semibold text-text">Demo accounts</h1>
+        <h1 class="text-xl font-semibold text-text">
+          {{ t('auth.demoAccounts.title') }}
+        </h1>
 
-        <p class="mt-1 text-sm text-text/60">Explore Growbase with different business lines</p>
+        <p class="mt-1 text-sm text-text/60">
+          {{ t('auth.demoAccounts.description') }}
+        </p>
       </div>
     </header>
 
@@ -33,7 +37,7 @@
       </div>
 
       <p class="text-xs text-text/60">
-        These demo accounts are for exploration only. No real data will be changed.
+        {{ t('auth.demoAccounts.disclaimer') }}
       </p>
     </footer>
   </section>

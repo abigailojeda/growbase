@@ -2,7 +2,7 @@
 
 <template>
   <Maintenance
-    title="Reports are in development"
-    description="Soon you'll be able to create new crop reports and review previous reports from one place."
+    :title="t('reports.maintenance.title')"
+    :description="t('reports.maintenance.description')"
   />
 </template>

@@ -13,6 +13,8 @@
     </RouterLink>
 
     <div class="flex items-center gap-4">
+      <LanguageSelector />
+
       <ColorModeToggle />
 
       <slot name="actions" />

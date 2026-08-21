@@ -1,5 +1,6 @@
 import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
 import PlantIcon from '@/components/icons/PlantIcon.vue'
 
@@ -23,6 +24,7 @@ export default defineComponent({
 
   setup() {
     const router = useRouter()
+    const { t } = useI18n()
 
     const goBack = () => {
       router.back()
@@ -30,6 +32,7 @@ export default defineComponent({
 
     return {
       goBack,
+      t,
     }
   },
 })

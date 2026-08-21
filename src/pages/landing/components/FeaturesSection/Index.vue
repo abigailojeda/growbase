@@ -1,17 +1,17 @@
 <script lang="ts" src="./Index.ts"></script>
 
 <template>
-  <section class="bg-background px-6 py-16 lg:px-12">
-    <div class="mx-auto w-full max-w-7xl">
+  <section class="px-6 py-16 lg:px-12 flex justify-center flex-wrap">
+    <div class="w-full max-w-7xl">
       <h2 class="text-center text-2xl font-semibold text-text sm:text-3xl">
-        Everything you need to grow with confidence
+        {{ t('landing.features.title') }}
       </h2>
 
       <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
-        <article
+        <section
           v-for="feature in features"
-          :key="feature.title"
-          class="rounded-xl border border-primary/10 bg-surface p-6"
+          :key="feature.id"
+          class="rounded-xl border-3 border-primary/10 p-6"
         >
           <div
             class="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary"
@@ -20,13 +20,13 @@
           </div>
 
           <h3 class="mt-5 font-semibold text-text">
-            {{ feature.title }}
+            {{ t(feature.title) }}
           </h3>
 
           <p class="mt-2 text-sm leading-6 text-text/60">
-            {{ feature.description }}
+            {{ t(feature.description) }}
           </p>
-        </article>
+        </section>
       </div>
     </div>
   </section>

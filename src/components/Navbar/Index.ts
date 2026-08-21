@@ -2,6 +2,7 @@ import { defineComponent, type PropType } from 'vue'
 
 import ColorModeToggle from '@/components/ColorModeToggle/Index.vue'
 import Logo from '@/components/Logo/Index.vue'
+import LanguageSelector from '@/components/LanguageSelector/Index.vue'
 
 export type NavbarVariant = 'glass' | 'surface'
 
@@ -11,6 +12,7 @@ export default defineComponent({
   components: {
     ColorModeToggle,
     Logo,
+    LanguageSelector,
   },
 
   props: {

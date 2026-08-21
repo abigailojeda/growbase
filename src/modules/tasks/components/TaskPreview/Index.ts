@@ -4,6 +4,8 @@ import type { Task } from '@/modules/tasks/types'
 import UserIcon from '@/components/icons/UserIcon.vue'
 import { formatDate } from '@/utils/date/date'
 
+import { useI18n } from 'vue-i18n'
+
 export default defineComponent({
   name: 'TaskPreview',
   components: {
@@ -24,6 +26,8 @@ export default defineComponent({
   setup(props) {
     const formattedDueDate = computed(() => formatDate(props.task.dueDate))
 
+    const { t } = useI18n()
+
     const headerClass = computed(() => {
       switch (props.task.status) {
         case 'pending':
@@ -38,6 +42,7 @@ export default defineComponent({
     return {
       formattedDueDate,
       headerClass,
+      t,
     }
   },
 })

@@ -6,12 +6,12 @@
     class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-70"
   >
     <ArrowIcon class="size-5" />
-    <span>Back to summary</span>
+    <span>{{ t('general.goSummary') }}</span>
   </RouterLink>
   <section>
-    <h1 class="text-2xl font-semibold text-text">Crops</h1>
+    <h1 class="text-2xl font-semibold text-text">{{ t('crops.title') }}</h1>
 
-    <p v-if="!crops.length" class="mt-6 text-text/60">No crops available.</p>
+    <p v-if="!crops.length" class="mt-6 text-text/60">{{ t('crops.noCrops') }}</p>
 
     <div v-else class="mt-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
       <CropCard

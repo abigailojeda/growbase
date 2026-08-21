@@ -1,18 +1,19 @@
 import { defineComponent, type PropType } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+import AccountsIcons from '@/components/icons/AccountsIcons.vue'
+import InfoIcon from '@/components/icons/InfoIcon.vue'
 import AccountItem from '@/modules/auth/components/AccountItem/Index.vue'
 import type { BusinessLine } from '@/modules/businessLines/types'
 import type { AccountSelection, UserRole } from '../../types'
-import InfoIcon from '@/components/icons/InfoIcon.vue'
-import AccountsIcons from '@/components/icons/AccountsIcons.vue'
 
 export default defineComponent({
   name: 'AccountCard',
 
   components: {
     AccountItem,
-    InfoIcon,
     AccountsIcons,
+    InfoIcon,
   },
 
   props: {
@@ -27,6 +28,8 @@ export default defineComponent({
   },
 
   setup(_props, { emit }) {
+    const { t } = useI18n()
+
     const handleLogin = (businessLineId: string, role: UserRole) => {
       emit('login', {
         businessLineId,
@@ -35,6 +38,7 @@ export default defineComponent({
     }
 
     return {
+      t,
       handleLogin,
     }
   },
