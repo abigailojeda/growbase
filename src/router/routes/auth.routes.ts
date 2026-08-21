@@ -13,6 +13,10 @@ export const authRoutes: RouteRecordRaw[] = [
         name: 'login',
         component: () => import('@/modules/auth/pages/LoginPage/Index.vue'),
       },
+      {
+        path: ':pathMatch(.*)*',
+        redirect: { name: 'login' },
+      },
     ],
   },
 ]

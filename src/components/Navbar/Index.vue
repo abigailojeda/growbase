@@ -3,7 +3,7 @@
 <template>
   <header
     :class="[
-      'fixed top-0 left-0 z-10 flex w-full items-center px-6 py-4',
+      'fixed top-0 left-0 z-20 flex w-full items-center px-6 py-4',
       showLogo ? 'justify-between' : 'justify-end',
       variant === 'glass' ? 'glass-surface' : 'bg-background border-b border-primary/20',
     ]"

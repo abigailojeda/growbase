@@ -21,12 +21,10 @@
 
   .landing-hero-background {
     background-image:
-      linear-gradient(
-        to bottom,
+      linear-gradient(to bottom,
         color-mix(in srgb, var(--theme-surface) 90%, transparent) 0%,
         color-mix(in srgb, var(--theme-surface) 55%, transparent) 40%,
-        color-mix(in srgb, var(--theme-surface) 10%, transparent) 100%
-      ),
+        color-mix(in srgb, var(--theme-surface) 10%, transparent) 100%),
       url('/images/landing1.jpg');
 
     background-size: cover;
@@ -40,12 +38,10 @@
 
   .login-background {
     background-image:
-      linear-gradient(
-        to bottom,
+      linear-gradient(to bottom,
         color-mix(in srgb, var(--theme-surface) 90%, transparent) 0%,
         color-mix(in srgb, var(--theme-surface) 55%, transparent) 60%,
-        color-mix(in srgb, var(--theme-surface) 10%, transparent) 100%
-      ),
+        color-mix(in srgb, var(--theme-surface) 10%, transparent) 100%),
       url('/images/test1.jpg');
 
     background-size: cover;
@@ -86,7 +82,7 @@
   }
 
   .crop-measurement {
-    @apply rounded-lg border p-4;
+    @apply rounded-lg border p-2;
   }
 
   .crop-measurement-good {
