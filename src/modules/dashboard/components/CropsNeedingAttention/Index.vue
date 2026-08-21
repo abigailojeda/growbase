@@ -16,19 +16,15 @@
       </RouterLink>
     </div>
 
-    <section v-if="!crops.length" class="mt-6 flex flex-col items-center justify-center gap-3">
-      <div class="flex flex-col items-center justify-center gap-3 p-6">
-        <CropIcon class="h-20 w-20 text-primary" />
-
-        <p class="mt-6 text-sm text-text/60">
-          {{ t('dashboard.needsAttention.allHealthy') }}
-        </p>
-
-        <RouterLink to="/app/crops" class="font-medium text-primary hover:text-primary/80">
-          {{ t('dashboard.needsAttention.viewAllCrops') }}
-        </RouterLink>
-      </div>
-    </section>
+    <EmptyMessage
+      v-if="!crops.length"
+      :message="t('dashboard.needsAttention.allHealthy')"
+      :icon="CropIcon"
+      :link="{
+        label: t('dashboard.needsAttention.viewAllCrops'),
+        to: '/app/crops',
+      }"
+    />
 
     <div v-else class="mt-6 flex flex-wrap gap-4">
       <RouterLink

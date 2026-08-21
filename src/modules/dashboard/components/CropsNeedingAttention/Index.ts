@@ -3,14 +3,15 @@ import type { CropImage } from '@/modules/crops/types'
 import type { CropNeedingAttention } from '@/modules/dashboard/types'
 import CropIcon from '@/components/icons/CropIcon.vue'
 import CropHealthHeader from '@/modules/crops/components/CropHealthHeader/Index.vue'
+import EmptyMessage from '@/components/EmptyMessage/Index.vue'
 
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   name: 'CropsNeedingAttention',
   components: {
-    CropIcon,
     CropHealthHeader,
+    EmptyMessage,
   },
 
   props: {
@@ -32,6 +33,7 @@ export default defineComponent({
 
     return {
       getCoverImage,
+      CropIcon,
       t,
     }
   },

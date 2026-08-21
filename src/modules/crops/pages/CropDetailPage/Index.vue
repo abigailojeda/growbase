@@ -70,4 +70,16 @@
       <CropReportHistory :crop="crop" :reports="reports" :users="users" />
     </div>
   </section>
+
+  <section v-else class="flex min-h-[60vh] items-center justify-center overflow-y-hidden">
+    <EmptyMessage
+      :message="t('crops.emptyCrop')"
+      :icon="CropEmptyIcon"
+      icon-class="text-text/30 h-24 w-24"
+      :link="{
+        label: t('crops.backToCrops'),
+        to: '/app/crops',
+      }"
+    />
+  </section>
 </template>

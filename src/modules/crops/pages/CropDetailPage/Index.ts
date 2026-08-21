@@ -18,6 +18,9 @@ import { cropService } from '@/modules/crops/services/crop.service'
 import type { Crop, CropReport } from '@/modules/crops/types'
 import { userService } from '@/modules/auth/services/user.service'
 import { calculateMeasurementHealth } from '@/utils/cropHealth/cropHealth'
+import EmptyMessage from '@/components/EmptyMessage/Index.vue'
+
+import CropEmptyIcon from '@/components/icons/CropEmptyIcon.vue'
 
 export default defineComponent({
   name: 'CropDetailPage',
@@ -29,6 +32,7 @@ export default defineComponent({
     CropStatus,
     ImageGallery,
     CropMeasurements,
+    EmptyMessage,
   },
 
   setup() {
@@ -108,6 +112,7 @@ export default defineComponent({
       health,
       measurements,
       isAdmin,
+      CropEmptyIcon,
       setCoverImage,
       t,
     }
