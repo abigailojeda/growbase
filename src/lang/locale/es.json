@@ -1,0 +1,16 @@
+{
+  "general": {
+    "changeLanguage": "Cambiar idioma"
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Plataforma integral de gestión agrícola",
+      "title": "Una agricultura más inteligente",
+      "titleAccent": "empieza aquí",
+      "description": "Gestiona cultivos, supervisa las condiciones del campo y organiza el trabajo diario de tu equipo desde una única plataforma.",
+      "cta": "Explorar Growbase",
+      "dashboardAlt": "Resumen del panel de Growbase",
+      "cropDetailAlt": "Detalle del cultivo e historial de reportes de Growbase"
+    }
+  }
+}

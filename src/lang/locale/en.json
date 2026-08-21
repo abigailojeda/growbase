@@ -1,0 +1,16 @@
+{
+  "general": {
+    "changeLanguage": "Change language"
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "All-in-one farm management platform",
+      "title": "Smarter farming",
+      "titleAccent": "starts here",
+      "description": "Manage crops, monitor field conditions and organize your team's daily work from one centralized platform.",
+      "cta": "Explore Growbase",
+      "dashboardAlt": "Growbase dashboard overview",
+      "cropDetailAlt": "Growbase crop detail and report history"
+    }
+  }
+}

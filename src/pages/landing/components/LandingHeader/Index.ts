@@ -9,6 +9,9 @@ import landingDark01 from '@/assets/images/landing/landing-dark-01.svg'
 import landingDark02 from '@/assets/images/landing/landing-dark-02.svg'
 
 import { useColorModeStore } from '@/theme/stores/colorMode.store'
+
+import { useI18n } from 'vue-i18n'
+
 const landingImages = {
   light: {
     primary: landingLight01,
@@ -24,6 +27,8 @@ export default defineComponent({
   name: 'LandingHeader',
 
   setup() {
+    const { t } = useI18n()
+
     useColorMode()
 
     const colorModeStore = useColorModeStore()
@@ -33,6 +38,7 @@ export default defineComponent({
 
     return {
       images,
+      t,
     }
   },
 })
