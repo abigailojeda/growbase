@@ -32,6 +32,10 @@ export const appRoutes: RouteRecordRaw[] = [
         name: 'reports',
         component: () => import('@/modules/reports/pages/ReportsPage/Index.vue'),
       },
+      {
+        path: ':pathMatch(.*)*',
+        redirect: { name: 'dashboard' },
+      },
     ],
   },
 ]

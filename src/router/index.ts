@@ -7,7 +7,15 @@ import { authGuard } from './guards/auth.guard'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [...landingRoutes, ...authRoutes, ...appRoutes],
+  routes: [
+    ...landingRoutes,
+    ...authRoutes,
+    ...appRoutes,
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: { name: 'landing' },
+    },
+  ],
 })
 
 router.beforeEach(authGuard)

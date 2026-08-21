@@ -2,13 +2,14 @@
 
 <template>
   <section v-if="crop">
-    <RouterLink
-      to="/app/crops"
-      class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-70"
+    <button
+      type="button"
+      @click="$router.back()"
+      class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-70 cursor-pointer"
     >
       <ArrowIcon class="size-5" />
-      <span>Back to crops</span>
-    </RouterLink>
+      <span>Go back</span>
+    </button>
 
     <div class="grid grid-cols-1 items-start gap-6 xl:grid-cols-2">
       <section class="overflow-hidden rounded-xl bg-surface">

@@ -86,7 +86,7 @@
   }
 
   .crop-measurement {
-    @apply rounded-lg border p-4;
+    @apply rounded-lg border p-2;
   }
 
   .crop-measurement-good {
