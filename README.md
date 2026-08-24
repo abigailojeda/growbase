@@ -1,5 +1,9 @@
 # Growbase 🌱
 
+---
+
+➜ [Demo](https://growbase-mu.vercel.app/)
+
 Growbase is a farm management platform designed to centralize crop monitoring, field operations and team coordination.
 
 The platform supports different agricultural business lines — Vineyard, Greenhouse and Open Fields — while keeping the same core workflow and adapting its visual identity to each one.
