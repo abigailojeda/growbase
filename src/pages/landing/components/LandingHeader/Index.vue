@@ -1,7 +1,7 @@
 <script lang="ts" src="./Index.ts"></script>
 
 <template>
-  <header class="relative flex flex-col bg-background p-4 pt-12">
+  <header class="relative flex flex-col bg-background p-4 lg:pt-12 pt-24">
     <div
       class="flex w-full flex-col gap-8 px-6 lg:min-h-160 lg:flex-row lg:items-center xl:px-12 2xl:px-20"
     >
