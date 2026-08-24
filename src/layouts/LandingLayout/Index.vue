@@ -2,12 +2,14 @@
 
 <template>
   <div class="min-h-screen bg-background text-text">
-    <Navbar variant="glass">
+    <Navbar logo-to="/" variant="glass">
       <template #actions>
         <UserMenu />
       </template>
     </Navbar>
 
     <RouterView />
+
+    <Footer />
   </div>
 </template>

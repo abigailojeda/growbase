@@ -1,0 +1,79 @@
+import { computed, defineComponent, ref, type PropType } from 'vue'
+
+import { useI18n } from 'vue-i18n'
+
+import TaskPreview from '@/modules/tasks/components/TaskPreview/Index.vue'
+import type { User } from '@/modules/auth/types'
+import type { Task, TaskStatus, TaskStatusSummary } from '@/modules/tasks/types'
+import ListIcon from '@/components/icons/ListIcon.vue'
+import GridIcon from '@/components/icons/GridIcon.vue'
+
+type TaskOverviewView = 'summary' | 'tasks'
+
+interface TaskGroup {
+  status: TaskStatus
+  label: string
+  tasks: Task[]
+}
+
+export default defineComponent({
+  name: 'TaskStatusOverview',
+
+  components: {
+    TaskPreview,
+    ListIcon,
+    GridIcon,
+  },
+
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    summary: {
+      type: Object as PropType<TaskStatusSummary>,
+      required: true,
+    },
+    tasks: {
+      type: Array as PropType<Task[]>,
+      required: true,
+    },
+    workers: {
+      type: Array as PropType<User[]>,
+      default: () => [],
+    },
+  },
+
+  setup(props) {
+    const { t } = useI18n()
+    const activeView = ref<TaskOverviewView>('tasks')
+
+    const taskGroups = computed<TaskGroup[]>(() => [
+      {
+        status: 'pending',
+        label: t('tasks.states.pending'),
+        tasks: props.tasks.filter((task) => task.status === 'pending'),
+      },
+      {
+        status: 'in-progress',
+        label: t('tasks.states.inProgress'),
+        tasks: props.tasks.filter((task) => task.status === 'in-progress'),
+      },
+      {
+        status: 'completed',
+        label: t('tasks.states.completed'),
+        tasks: props.tasks.filter((task) => task.status === 'completed'),
+      },
+    ])
+
+    const getAssigneeName = (userId: string) =>
+      props.workers.find((worker) => worker.id === userId)?.name
+
+    return {
+      activeView,
+      taskGroups,
+      getAssigneeName,
+      t,
+    }
+  },
+})

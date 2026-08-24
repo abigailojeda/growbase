@@ -12,19 +12,21 @@
       </div>
 
       <div class="min-w-0 flex-1">
-        <h2 class="text-lg font-semibold text-text">
-          {{ businessLine.name }}
-        </h2>
+        <img
+          :src="businessLine.logoUrl"
+          :alt="`${businessLine.name} logo`"
+          class="h-10 max-w-full object-contain"
+        />
       </div>
     </div>
 
     <div class="flex shrink-0 flex-col gap-2">
       <button type="button" class="btn-outline" @click="$emit('login', 'admin')">
-        Login as Admin
+        {{ t('auth.demoAccounts.adminLogin') }}
       </button>
 
       <button type="button" class="btn-outline-secondary" @click="$emit('login', 'worker')">
-        Login as Worker
+        {{ t('auth.demoAccounts.workerLogin') }}
       </button>
     </div>
   </div>

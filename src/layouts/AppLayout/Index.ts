@@ -8,6 +8,7 @@ import type { BusinessLine } from '@/modules/businessLines/types'
 
 import Navbar from '@/components/Navbar/Index.vue'
 import UserMenu from '@/modules/auth/components/UserMenu/Index.vue'
+import Sidebar from '@/components/Sidebar/Index.vue'
 
 export default defineComponent({
   name: 'AppLayout',
@@ -15,6 +16,7 @@ export default defineComponent({
   components: {
     Navbar,
     UserMenu,
+    Sidebar,
   },
 
   setup() {
@@ -24,6 +26,15 @@ export default defineComponent({
     const activeBusinessLine = ref<BusinessLine | null>(null)
 
     const activeTheme = computed(() => activeBusinessLine.value?.theme)
+    const SIDEBAR_COLLAPSED_KEY = 'growbase-sidebar-collapsed'
+
+    const isSidebarCollapsed = ref(localStorage.getItem(SIDEBAR_COLLAPSED_KEY) === 'true')
+
+    const isSidebarMobileOpen = ref(false)
+
+    watch(isSidebarCollapsed, (collapsed) => {
+      localStorage.setItem(SIDEBAR_COLLAPSED_KEY, String(collapsed))
+    })
 
     watch(
       () => currentUser.value?.businessLineId,
@@ -42,6 +53,8 @@ export default defineComponent({
 
     return {
       activeBusinessLine,
+      isSidebarCollapsed,
+      isSidebarMobileOpen,
     }
   },
 })

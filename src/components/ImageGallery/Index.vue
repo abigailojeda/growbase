@@ -1,0 +1,68 @@
+<script lang="ts" src="./Index.ts"></script>
+
+<template>
+  <div
+    v-if="images.length"
+    class="flex items-end gap-4 overflow-x-auto border-b border-text/10 py-8"
+  >
+    <div v-for="image in orderedImages" :key="image.id" class="relative shrink-0">
+      <button
+        type="button"
+        class="block cursor-pointer overflow-hidden hover:opacity-90 transition-opacity rounded-lg border border-text/10"
+        @click="openImage(image)"
+      >
+        <img
+          :src="image.url"
+          :alt="alt"
+          :class="
+            image.id === effectiveFeaturedImageId
+              ? 'h-64 w-96 object-cover'
+              : 'h-32 w-48 object-cover'
+          "
+        />
+      </button>
+
+      <button
+        v-if="editable"
+        type="button"
+        class="absolute top-2 right-2 flex size-9 cursor-pointer items-center justify-center rounded-full transition-colors"
+        :class="
+          image.id === effectiveFeaturedImageId
+            ? 'bg-primary text-white'
+            : 'bg-surface/90 text-text hover:bg-surface'
+        "
+        :aria-label="
+          image.id === effectiveFeaturedImageId ? featuredTexts.current : featuredTexts.setAs
+        "
+        @click.stop="requestSetFeatured(image.id)"
+      >
+        <StarIcon class="size-5" />
+      </button>
+    </div>
+  </div>
+
+  <div
+    v-else
+    class="flex min-h-48 items-center justify-center border-b border-text/10 py-8 text-text/50"
+  >
+    {{ featuredTexts.noImages }}
+  </div>
+
+  <ImageModal
+    v-if="selectedImage"
+    :open="true"
+    :src="selectedImage.url"
+    :alt="alt"
+    @close="closeImage"
+  />
+
+  <ConfirmModal
+    :open="isConfirmModalOpen"
+    :title="featuredTexts.title"
+    :message="featuredTexts.message"
+    :confirm-label="featuredTexts.confirm"
+    :cancel-label="featuredTexts.cancel"
+    @confirm="confirmSetFeatured"
+    @cancel="cancelSetFeatured"
+  />
+</template>

@@ -4,6 +4,7 @@ import { useTheme } from '@/composables/useTheme/useTheme'
 import { growbaseTheme } from '@/theme/growbase.theme'
 import Navbar from '@/components/Navbar/Index.vue'
 import UserMenu from '@/modules/auth/components/UserMenu/Index.vue'
+import Footer from '@/components/Footer/Index.vue'
 
 export default defineComponent({
   name: 'LandingLayout',
@@ -11,6 +12,7 @@ export default defineComponent({
   components: {
     Navbar,
     UserMenu,
+    Footer,
   },
 
   setup() {

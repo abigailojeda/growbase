@@ -1,0 +1,194 @@
+{
+  "general": {
+    "changeLanguage": "Cambiar idioma",
+    "comingSoon": "Próximamente",
+    "goBack": "Volver Atrás",
+    "goSummary": "Volver al resumen",
+    "noImageAvailable": "No hay ninguna imagen disponible",
+    "noNotesProvided": "No se han añadido notas.",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "cancel": "Cancelar",
+    "logout": "Cerrar sesión",
+    "login": "Iniciar sesión"
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Plataforma integral de gestión agrícola",
+      "title": "Una agricultura más inteligente",
+      "titleAccent": "empieza aquí",
+      "description": "Gestiona cultivos, supervisa las condiciones del campo y organiza el trabajo diario de tu equipo desde una única plataforma.",
+      "cta": "Explorar Growbase",
+      "dashboardAlt": "Resumen del panel de Growbase",
+      "cropDetailAlt": "Detalle del cultivo e historial de reportes de Growbase"
+    },
+    "benefits": {
+      "saveTime": {
+        "title": "Ahorra tiempo",
+        "description": "Simplifica las operaciones diarias y reduce el trabajo manual."
+      },
+      "productivity": {
+        "title": "Productividad",
+        "description": "Utiliza información en tiempo real para tomar mejores decisiones más rápido."
+      },
+      "team": {
+        "title": "Impulsa a tu equipo",
+        "description": "Asigna tareas, sigue el progreso y mantén a todo el equipo coordinado."
+      },
+      "organization": {
+        "title": "Organización",
+        "description": "Gestiona cultivos, tareas y reportes desde un único lugar."
+      }
+    },
+    "businessLines": {
+      "title": "Diseñado para todo tipo de cultivos",
+      "iconAlt": "Icono de {name}",
+      "vineyard": {
+        "name": "Vineyard",
+        "description": "Gestiona las parcelas, supervisa las vides y mantén la calidad desde la brotación hasta la vendimia."
+      },
+      "greenhouse": {
+        "name": "Greenhouse",
+        "description": "Controla las condiciones de cultivo y optimiza la producción durante todo el año."
+      },
+      "openFields": {
+        "name": "Open Fields",
+        "description": "Supervisa grandes superficies, planifica las operaciones y maximiza el rendimiento del campo."
+      }
+    },
+    "features": {
+      "title": "Todo lo que necesitas para cultivar con confianza",
+      "cropMonitoring": {
+        "title": "Monitorización de cultivos",
+        "description": "Controla la temperatura, humedad, humedad del suelo, pH y otros parámetros en tiempo real."
+      },
+      "taskCoordination": {
+        "title": "Coordinación de tareas",
+        "description": "Crea tareas, asígnalas a tu equipo y supervisa su progreso fácilmente."
+      },
+      "reportHistory": {
+        "title": "Historial de reportes",
+        "description": "Mantén un historial completo de mediciones, observaciones y reportes de campo."
+      },
+      "healthInsights": {
+        "title": "Estado de los cultivos",
+        "description": "Detecta rápidamente problemas en la salud de los cultivos y centra la atención donde más importa."
+      }
+    },
+    "footer": {
+      "homeAriaLabel": "Ir al inicio de Growbase",
+      "description": "Gestión inteligente de cultivos para operaciones agrícolas conectadas.",
+      "cta": "Explorar Growbase",
+      "copyright": "© {year} Growbase. Todos los derechos reservados."
+    }
+  },
+  "auth": {
+    "demoAccounts": {
+      "title": "Cuentas demo",
+      "description": "Explora Growbase con diferentes líneas de negocio",
+      "disclaimer": "Estas cuentas demo son únicamente para explorar la aplicación. No se modificará ningún dato real.",
+      "adminLogin": "Acceder como administrador",
+      "workerLogin": "Acceder como trabajador"
+    }
+  },
+  "navigation": {
+    "overview": "Resumen",
+    "crops": "Cultivos",
+    "tasks": "Tareas",
+    "reports": "Reportes"
+  },
+  "tasks": {
+    "name": "tareas",
+    "maintenance": {
+      "title": "La gestión de tareas está en desarrollo",
+      "description": "Pronto podrás organizar, asignar y hacer seguimiento del trabajo de todo tu equipo desde un único lugar."
+    },
+    "states": {
+      "pending": "Pendiente",
+      "inProgress": "En progreso",
+      "completed": "Completada",
+      "total": "Total"
+    },
+    "teamOverview": "Resumen del equipo",
+    "tasksOverview": "Resumen de tareas",
+    "cardsView": "Vista de tarjetas",
+    "chartView": "Vista gráfica",
+    "noWorkers": "No hay trabajadores disponibles.",
+    "taskCount": "{count} tarea | {count} tareas",
+    "statusByWorker": "Estado de las tareas por trabajador",
+    "goToTasks": "Ir a tareas",
+    "myTasks": "Mis tareas",
+    "empty": "No hay tareas.",
+    "due": "Fecha de entrega:"
+  },
+  "reports": {
+    "maintenance": {
+      "title": "Los reportes están en desarrollo",
+      "description": "Pronto podrás crear nuevos reportes de cultivos y consultar los anteriores desde un único lugar."
+    }
+  },
+  "dashboard": {
+    "needsAttention": {
+      "title": "Requieren atención",
+      "viewAllCrops": "Ver todos los cultivos",
+      "allHealthy": "Todos los cultivos se encuentran dentro de sus condiciones óptimas."
+    }
+  },
+  "health": {
+    "title": "Salud de los cultivos",
+    "good": "Bueno",
+    "warning": "En peligro",
+    "critical": "Crítico",
+    "noData": "Sin datos",
+    "summaryView": "Vista resumen de salud",
+    "chartView": "Vista gráfica de salud",
+    "chartAriaLabel": "Distribución de la salud de los cultivos"
+  },
+  "summary": {
+    "totalCrops": "Cantidad de cultivos",
+    "activeCrops": "Cultivos activos",
+    "needsAttention": "Requieren atención"
+  },
+  "crops": {
+    "title": "Cultivos",
+    "noCrops": "No hay cultivos disponibles.",
+    "coverImage": "Imagen de portada",
+    "currentMeasurements": "Mediciones actuales",
+    "noMeasurements": "Todavía no se han registrado mediciones.",
+    "latestNotes": "Últimas notas",
+    "types": {
+      "Strawberries": "Fresas",
+      "Potatoes": "Papas",
+      "Corn": "Maíz",
+      "Grapes": "Uvas",
+      "Tomatoes": "Tomates"
+    },
+    "emptyCrop": "Este cultivo no existe o no tiene datos registrados, prueba con otro.",
+    "backToCrops": "Volver a cultivos"
+  },
+  "history": {
+    "title": "Historial de reportes",
+    "noReports": "No hay reportes disponibles."
+  },
+  "report": {
+    "noNotes": "No se han proporcionado notas.",
+    "measurements": {
+      "Temperature": "Temperatura",
+      "Humidity": "Humedad",
+      "Soil moisture": "Humedad del suelo",
+      "pH": "pH",
+      "Optimal": "Óptimo"
+    }
+  },
+  "images": {
+    "currentCover": "Imagen de portada actual",
+    "setAsCover": "Aceptar",
+    "setCover": "Establecer imagen de portada",
+    "confirmSetCover": "¿Seguro que quieres establecer esta imagen como imagen de portada?",
+    "noImages": "No hay imágenes disponibles"
+  },
+  "roles": {
+    "admin": "Administrador",
+    "worker": "Empleado"
+  }
+}

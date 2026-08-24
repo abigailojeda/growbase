@@ -1,24 +1,47 @@
 <script lang="ts" src="./Index.ts"></script>
 
 <template>
-  <header
-    class="landing-hero-background landing-hero-mobile-position lg:bg-center relative flex min-h-[70vh] w-full items-center justify-center overflow-hidden"
-  >
-    <!-- OVERLAY -->
-    <div class="absolute inset-0 bg-black/40"></div>
+  <header class="relative flex flex-col bg-background p-4 lg:pt-12 pt-24">
+    <div
+      class="flex w-full flex-col gap-8 px-6 lg:min-h-160 lg:flex-row lg:items-center xl:px-12 2xl:px-20"
+    >
+      <div class="w-full lg:w-[40%] xl:w-[38%]">
+        <p class="mb-4 text-sm font-medium text-primary">
+          {{ t('landing.hero.eyebrow') }}
+        </p>
 
-    <!-- CONTENT -->
-    <div class="relative mx-auto w-full max-w-5xl px-6 py-20 text-center text-white">
-      <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-        Smarter farming starts here
-      </h1>
+        <h1
+          class="text-4xl font-semibold tracking-tight text-text sm:text-5xl lg:text-6xl 2xl:text-7xl"
+        >
+          {{ t('landing.hero.title') }}
 
-      <p class="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
-        Manage crops, monitor field conditions and organize your team's daily work from one
-        centralized platform.
-      </p>
+          <span class="block text-primary">
+            {{ t('landing.hero.titleAccent') }}
+          </span>
+        </h1>
 
-      <RouterLink to="/login" class="primary-btn"> Get started </RouterLink>
+        <p class="mt-6 max-w-xl text-base leading-7 text-text/60 sm:text-lg 2xl:text-xl">
+          {{ t('landing.hero.description') }}
+        </p>
+
+        <RouterLink to="/login" class="primary-btn mt-8">
+          {{ t('landing.hero.cta') }}
+        </RouterLink>
+      </div>
+
+      <div class="relative hidden min-h-125 min-w-0 flex-1 lg:block">
+        <img
+          :src="images.primary"
+          :alt="t('landing.hero.dashboardAlt')"
+          class="absolute top-0 left-0 w-[76%] rounded-2xl border border-primary/40 shadow-xl"
+        />
+
+        <img
+          :src="images.secondary"
+          :alt="t('landing.hero.cropDetailAlt')"
+          class="absolute top-40 right-0 z-10 w-[78%] rounded-2xl border border-primary/40 shadow-xl"
+        />
+      </div>
     </div>
   </header>
 </template>

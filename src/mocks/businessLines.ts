@@ -3,17 +3,21 @@ import type { BusinessLine } from '@/modules/businessLines/types'
 import fieldsIconUrl from '@/assets/images/business-lines/tree-alt.svg'
 import greenhouseIconUrl from '@/assets/images/business-lines/plant-pot.svg'
 import vineyardIconUrl from '@/assets/images/business-lines/cherry.svg'
+import vineyardLogo from '@/assets/images/business-lines/vineyard-logo.svg'
+import greenhouseLogo from '@/assets/images/business-lines/greenhouse-logo.svg'
+import openFieldsLogo from '@/assets/images/business-lines/open-fields-logo.svg'
 
 export const businessLines = [
   {
     id: 'vineyard',
     name: 'Vineyard',
     iconUrl: vineyardIconUrl,
+    logoUrl: vineyardLogo,
     theme: {
       light: {
         primary: '#7C3F58',
         secondary: '#C99AA8',
-        background: '#FAF7F8',
+        background: '#e0d7da',
         surface: '#FFFFFF',
         text: '#271F22',
       },
@@ -30,11 +34,12 @@ export const businessLines = [
     id: 'greenhouse',
     name: 'Greenhouse',
     iconUrl: greenhouseIconUrl,
+    logoUrl: greenhouseLogo,
     theme: {
       light: {
         primary: '#3D7A57',
         secondary: '#A8CCB5',
-        background: '#F5F9F6',
+        background: '#cfd5d1',
         surface: '#FFFFFF',
         text: '#1E2922',
       },
@@ -51,6 +56,7 @@ export const businessLines = [
     id: 'fields',
     name: 'Open Fields',
     iconUrl: fieldsIconUrl,
+    logoUrl: openFieldsLogo,
     theme: {
       light: {
         primary: '#71834A',
