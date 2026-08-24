@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.2.0](https://github.com/abigailojeda/growbase/compare/v0.1.0...v0.2.0) (2026-08-24)
+
+### Features
+
+* chartjs in Crop health ([1a35e69](https://github.com/abigailojeda/growbase/commit/1a35e692307199e81381cc648280f6f177b11f11))
+* crop cards ([a9d4862](https://github.com/abigailojeda/growbase/commit/a9d486214e42418eb4238b296b86095dd079868b))
+* crop detail page ([ac791f0](https://github.com/abigailojeda/growbase/commit/ac791f0f7e1f99b2380fdec76018ffa1c8e733e1))
+* dashboard & sidebar ([aa98297](https://github.com/abigailojeda/growbase/commit/aa982976057947ec75d449d81f46f6d1e27c38a2))
+* feat: implement image gallery and confirm modal components; refactor crop detail page ([c984290](https://github.com/abigailojeda/growbase/commit/c984290f49a9d7dc0e585e5aa318507964efe457))
+* implement chartjs in team overview ([361bc6e](https://github.com/abigailojeda/growbase/commit/361bc6ebad8a77645159f79fefc7e60d8cbc6325))
+* implement crops management & data ([84a64cd](https://github.com/abigailojeda/growbase/commit/84a64cdc6727d7a0e2529b5f571965ab7f77afca))
+* implement empty message when there is no data ([0e38449](https://github.com/abigailojeda/growbase/commit/0e38449188ba49c4e24b151780e6ae20768ffeb1))
+* implement report history ([0807201](https://github.com/abigailojeda/growbase/commit/0807201fd9147ff1d31d0cf6c03669d63dd0ad1a))
+* implement Task Summary & Team Overview ([782adf0](https://github.com/abigailojeda/growbase/commit/782adf02bed5769425eb489359c623c4a7fbb2c3))
+* implement translation & update tests ([f89e383](https://github.com/abigailojeda/growbase/commit/f89e3838cd0b8635f2d0b10e7d96e33786e3208b))
+* landing page sections & layout ([849e41c](https://github.com/abigailojeda/growbase/commit/849e41c6760b61f6c80c72b6479efbeb09530d92))
+* layout review ([caad5f5](https://github.com/abigailojeda/growbase/commit/caad5f5ed4a46aa0ca75d92d97c7264f362f0490))
+* sidebar layout ([59cbc86](https://github.com/abigailojeda/growbase/commit/59cbc86d63f47b4daadc0e8b89459957860235f7))
+* summary in dashboard ([89995d7](https://github.com/abigailojeda/growbase/commit/89995d79b4f4a1dfd75bb141c66a9e77f9b64642))
+* task page under construction ([ef9f2b1](https://github.com/abigailojeda/growbase/commit/ef9f2b132fcac0278a1875b4ab740c44a455e287))
+* **translations:** setting i18n ([1002087](https://github.com/abigailojeda/growbase/commit/1002087517fb348b067c5d65474dad5c819e40aa))
+
 ## 0.1.0 (2026-08-14)
 
 ### Features
